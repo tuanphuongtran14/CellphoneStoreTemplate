@@ -253,18 +253,18 @@ body {
     align-items: center;
 
     .logo {
-        width: 80px;
+        width: 100px;
         
         @media only screen and (min-width: 400px) {
-            width: 100px;
-        }
-
-        @media only screen and (min-width: 768px) {
             width: 120px;
         }
 
-        @media only screen and (min-width: 992px) {
+        @media only screen and (min-width: 768px) {
             width: 150px;
+        }
+
+        @media only screen and (min-width: 992px) {
+            width: 180px;
         }
     }
 
