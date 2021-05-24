@@ -1,0 +1,88 @@
+window.onload = function () {
+    toggleMenuAndSearch();
+    playSlider();
+    
+}
+
+function playSlider() {
+    var flkty = new Flickity( '.gallery', {
+        autoPlay: 5000
+    });
+    flkty.playPlayer();
+}
+
+function toggleMenuAndSearch() {
+    let menu = document.getElementById("menu--nav");
+    let menuParent = document.getElementById("navbar-menu");
+
+    
+    let searchBar = document.getElementById("search-bar");
+    let searchBtn = document.getElementById("search-btn");
+
+    let overBodyLayer = document.getElementById("overlaybody");
+
+    let body = document.getElementById("body");
+    let root = document.getElementById("root");
+
+    // If window < 991, display mobile menu version
+    if (innerWidth < 991)
+        body.appendChild(menu);
+
+    // If user change window width, change to suitable version
+    window.onresize = function () {
+        if (window.innerWidth >= 992) {
+            root.style.transform = "translateX(0%)";
+            if (getStyleElement(searchBar, "display") === "none")
+                overBodyLayer.style.display = "none";
+                menuParent.appendChild(menu);
+        } else {
+            body.appendChild(menu);
+            menu.style.left = "-60%";
+        }
+    }
+
+    // If bars button is clicked, open menu on left
+    document.getElementById("bars-btn").onclick = function () {
+        overBodyLayer.style.display = "block";
+        root.style.transform = "translateX(60%)";
+        menu.style.left = "0%";
+    }
+
+    // If search button is clicked, display search bar
+    searchBtn.onclick = function () {
+        searchBar.style.display = "flex";
+        overBodyLayer.style.display = "block";
+    }
+
+
+    // If over body layer is click, close menu or search bar
+    overBodyLayer.onclick = function () {
+        if(getStyleElement(searchBar, "display") === "none") {
+            root.style.transform = "translateX(0%)";
+            menu.style.left = "-60%";
+            overBodyLayer.style.display = "none";
+        } else {
+            searchBar.style.display = "none";
+            overBodyLayer.style.display = "none";
+        }
+    }
+}
+
+function getStyleByID(idElement,styleProp)
+{
+    var element = document.getElementById(idElement);
+    if (element.currentStyle)
+        var y = element.currentStyle[styleProp];
+    else if (window.getComputedStyle)
+        var y = document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProp);
+    return y;
+}
+
+function getStyleElement(element,styleProp)
+{
+    if (element.currentStyle)
+        var y = element.currentStyle[styleProp];
+    else if (window.getComputedStyle)
+        var y = document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProp);
+    return y;
+}

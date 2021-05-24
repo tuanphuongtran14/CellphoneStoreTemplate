@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./vendors/flickity.min.css">
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="body">
+    <div id="root">
+        <div class="header__navbar">
+            <nav class="navbar container px-0">
+                <!-- <div class="navbar__bar-btn">
+                    
+                    <!-- <i class="fa fa-times fa--xl close-btn" aria-hidden="true"></i> -->
+                <!-- </div> -->
+                <div class="navbar__logo">
+                    <a class="text-white ml-3 mr-4 bars-btn" id="bars-btn">
+                        <i class="fa fa-bars fa--md" aria-hidden="true"></i>
+                    </a>
+                    <a href="/"><img src="./img/logo.png" class="logo" alt=""></a>
+                </div>
+                <div class="navbar__menu" id="navbar-menu">
+                    <ul class="menu menu--nav" id="menu--nav">
+                        <li class="menu__item">
+                            <a href="http://uitstyle.xyz" class="text-white">Link 1</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="text-white">Link 2</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="text-white">Link 3</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="text-white">Link 4</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="text-white">Link 5</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar__others">
+                    <ul class="menu menu--horizontal">
+                        <li class="menu__item">
+                            <a class="text-white" id="search-btn">
+                                <i class="fa fa-search fa--md" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="text-white">
+                                <i class="fa fa-heart fa--md" aria-hidden="true" data-amount="0"></i>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="text-white">
+                                <i class="fa fa-shopping-bag fa--md" data-amount="0" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="menu__item">
+                            <a class="text-white">
+                                <i class="fa fa-user fa--md" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container px-0 banner">
+            <div class="carousel row mx-0">
+                <div class="col-12 col-lg-8 px-0">
+                    <div class="gallery js-flickity " data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                        <img class="gallery-cell" src="./img/banner/ROG_Phone_Sliding_desk.webp" alt="">
+                        <img class="gallery-cell" src="./img/banner/690x300_Buds_.webp" alt="">
+                        <img class="gallery-cell" src="./img/banner/mg-6690x300.webp" alt="">
+                        <img class="gallery-cell" src="./img/banner/IMG_20210515_220924_947.webp" alt="">
+                    </div>
+                </div>
+                <div class="sub-banner col-12 col-lg-4 px-0">
+                    <div class="col-12 mb-2 pr-0">
+                        <img src="./img/banner/iPhone_12_690x300_copy_3_.webp" alt="">
+                    </div>
+                    <div class="col-12 pr-0">
+                        <img src="./img//banner/Right_banner.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 bottom-banner px-0 mt-2">
+                    <img src="./img/banner/bottom-banner.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box container px-0">
+            <div class="box-title">
+                <div class="col text-red">
+                    <h2>
+                        <i class="fa fa-fire" aria-hidden="true"></i> &nbsp; Hot sale
+                    </h2>
+                </div>
+                <div class="col text-right">
+                    <a href="" class="text-blue">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="product-list js-flickity " data-flickity-options='{ "freeScroll": true, "prevNextButtons": false,
+                "pageDots": false, "contain": true }'>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb-S10-5G-1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy S10 5G 256 cũ 99%</span>
+                        <div class="product__price">
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_A90_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy A90 5G Hàn 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_11-ProMAX_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 11 Pro MAX 64GB cũ 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_Reno5_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">OPPO Reno 5 8G/128G Chính Hãng</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_X3Pro_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Poco X3 Pro Chính hãng (6G/128G)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/productS/thumb_RMN10p_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Redmi Note 10 Pro Chính hãng (6GB/ 128GB)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box container px-0">
+            <div class="box-title">
+                <div class="col text-red">
+                    <h2>
+                        BÁN CHẠY NHẤT
+                    </h2>
+                </div>
+                <div class="col text-right">
+                    <a href="" class="text-blue">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="product-list js-flickity " data-flickity-options='{ "freeScroll": true, "prevNextButtons": false,
+                "pageDots": false, "contain": true }'>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb-S10-5G-1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy S10 5G 256 cũ 99%</span>
+                        <div class="product__price">
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_A90_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy A90 5G Hàn 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_11-ProMAX_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 11 Pro MAX 64GB cũ 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_Reno5_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">OPPO Reno 5 8G/128G Chính Hãng</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_X3Pro_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Poco X3 Pro Chính hãng (6G/128G)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/productS/thumb_RMN10p_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Redmi Note 10 Pro Chính hãng (6GB/ 128GB)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box container px-0">
+            <div class="box-title">
+                <div class="col text-red">
+                    <h2>
+                        SẢN PHẨM MỚI NHẤT
+                    </h2>
+                </div>
+                <div class="col text-right">
+                    <a href="" class="text-blue">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="product-list js-flickity " data-flickity-options='{ "freeScroll": true, "prevNextButtons": false,
+                "pageDots": false, "contain": true }'>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb-S10-5G-1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy S10 5G 256 cũ 99%</span>
+                        <div class="product__price">
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_A90_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Samsung Galaxy A90 5G Hàn 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_11-ProMAX_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 11 Pro MAX 64GB cũ 99%</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_Reno5_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">OPPO Reno 5 8G/128G Chính Hãng</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/products/thumb_X3Pro_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Poco X3 Pro Chính hãng (6G/128G)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product">
+                        <img src="./img/productS/thumb_RMN10p_2-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Xiaomi Redmi Note 10 Pro Chính hãng (6GB/ 128GB)</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer mt-auto bg-dark"> 
+            <div class="container text-white text-left text-md-left pt-5">
+              <div class="row">
+                <!-- COLUMN 1 -->
+                <div class="col-md-3 mx-auto mb-4 px-3">
+                  <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN HỖ TRỢ</h6>
+                  <ul class="menu menu--vertical">
+                    <li><a class="text-white href="/chinh-sach-bao-hanh/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
+					<li><a class="text-white href="/chinh-sach-bao-hanh-iphone-ipad/" title="Chính sách bảo hành iPhone - iPad">Chính sách bảo hành iPhone - iPad</a></li>
+                    <li><a class="text-white href="chinh-sach-doi-tra-hang/" title="Chính sách đổi trả hàng">Bảo hành Xiaomi chính hãng</a></li>
+					<li><a class="text-white href="/chinh-sach-mua-hang-online/" title="Chính sách mua hàng Online">Chính sách mua hàng Online</a></li>
+					<li><a class="text-white href="/mua-hang-tra-gop" title="Mua hàng trả góp">Mua hàng trả góp</a></li>
+					<li><a class="text-white href="/chinh-sach-bao-mat-thong-tin-khach-hang/" title="Mua hàng trả góp">Chính sách bảo mật thông tin khách hàng</a></li>
+					<li><a class="text-white href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=16826" target="_blank"><img src="https://uqoojcos5nobj.vcdn.cloud/dathongbao.png" style="width:130px;height:auto;" alt="Đã thông báo với Bộ Công Thương"></a></li>
+				</ul>
+                </div>
+      
+                <!-- COLUMN 2 -->
+                <div class="col-md-3 mx-auto mb-4 px-3">
+                  <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN LIÊN LẠC</h6>
+                  <ul class="menu menu--vertical">
+					<li><a class="text-white href="#" title="Hotline">Hotline bán hàng:<br></a><a class="text-white" href="tel:0966062468">0966.06.2468<br><a class="text-white" href="tel:1900633471">1900.633.471</a></li>
+                    <li><a class="text-white href="tel:1900633471" title="Hotline">Hotline bảo hành, kỹ thuật: 1900.633.471</a></li>
+                    <li><a class="text-white href="tel:0962824422" title="Hotline">Hotline hỗ trợ phần mềm: 096.282.4422</a></li>
+					<li><a class="text-white href="tel:1900633471" title="Hotline">Hotline phản ánh chất lượng dịch vụ:1900.633.471</a></li>
+				</ul>
+                </div>
+      
+                <!-- COLUMN 3 -->
+                <div class="col-md-3 mx-auto mb-4 px-3">
+                  <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN BẮC</h6>
+                  <ul class="menu menu--vertical">
+                    <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
+					<li class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</li>
+                    <li class="text-white"><a class="text-white href="chinh-sach-doi-tra-hang/" title="Chính sách đổi trả hàng">118 Thái hà, Đống Đa, Hà Nội</li>
+					<li class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</li>
+					<li class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</li>
+					<li class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</li>
+                  </ul> 
+                </div>
+      
+                <!-- COLUMN 4 -->
+                <div class="col-md-3 mx-auto mb-4 px-3">
+                  <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN NAM</h6>
+                  <ul class="menu menu--vertical">
+                    <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
+					<li class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</li>
+                    <li class="text-white"><a class="text-white href="chinh-sach-doi-tra-hang/" title="Chính sách đổi trả hàng">118 Thái hà, Đống Đa, Hà Nội</li>
+					<li class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</li>
+					<li class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</li>
+					<li class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+    <form action="" class="search-bar" id="search-bar">
+        <input type="text" name="seach" id="seach" class="search-input" placeholder="Search">
+        <button type="submit" class="btn btn--search">
+            <i class="fa fa-search " aria-hidden="true"></i>
+        </button>
+    </form>
+    <div id="overlaybody"></div>
+    <!-- Optional JavaScript -->
+    <script src="./vendors/flickity.pkgd.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

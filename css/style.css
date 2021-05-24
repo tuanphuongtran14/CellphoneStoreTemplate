@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/******************************************************************
+  Template Name: Devera Cellphone Store
+  Description: Cellphone Stroe - E-Commerce Template
+  Author: Devera- Nhóm 1
+  Version: 1.0
+******************************************************************/
+/*------------------------------------------------------------------
+[Table of contents]
+
+I.  Template default CSS
+	1. #root & #overlaybody
+	2. Button
+	3. Text Style & Color
+	4. Menu
+    5. Fontawesome
+II.  Header Section
+    1. Navbar
+    2. SearchBar
+III. Carousel Section
+IV.  
+5.  Banner Section
+6.  Product Section
+7.  Intagram Section
+8.  Latest Section
+9.  Contact
+10.  Footer Style
+-----------------------------------------------------------------------------------*/
+/*=================================================================================*/
+/* I. Template default CSS
+/*=================================================================================*/
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f0f0f0; }
+
+/*-------------------------*/
+/* 1. #root & #overlaybody
+/*-------------------------*/
+#root {
+  transition: 0.4s; }
+
+#overlaybody {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 90;
+  display: none; }
+
+/*-------------------------*/
+/* 2. Button
+/*-------------------------*/
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem; }
+  .btn.btn--search {
+    background-color: #F3F3F3;
+    height: 2.3rem;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; }
+
+/*-------------------------*/
+/* 3. Text Style & Color
+/*-------------------------*/
+.font-weight-bold {
+  font-weight: 700 !important; }
+
+.text-uppercase {
+  text-transform: uppercase !important; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-white {
+  color: white; }
+
+.text-red {
+  color: #d70018; }
+
+.text-blue {
+  color: #0357e7; }
+
+.text-right {
+  text-align: right; }
+
+.bg-dark {
+  background-color: #343a40 !important; }
+
+.bg-info {
+  background-color: #17a2b8 !important; }
+
+/*-------------------------*/
+/* 4. Menu
+/*-------------------------*/
+.menu {
+  list-style: none; }
+  .menu.menu--nav {
+    transition: 0.4s; }
+    .menu.menu--nav .menu__item {
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+      .menu.menu--nav .menu__item:hover {
+        background-color: #b60015; }
+      .menu.menu--nav .menu__item a {
+        text-decoration: none;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        display: inline-block; }
+    @media only screen and (max-width: 991px) {
+      .menu.menu--nav {
+        position: fixed;
+        top: 0;
+        left: -60%;
+        z-index: 100;
+        width: 60%;
+        height: 100%;
+        background-color: #fff; }
+        .menu.menu--nav .menu__item {
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid #e5e5e5; }
+          .menu.menu--nav .menu__item:hover {
+            background-color: #f3f3f3; }
+          .menu.menu--nav .menu__item a {
+            color: #000; } }
+  .menu.menu--horizontal .menu__item {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    @media only screen and (max-width: 575px) {
+      .menu.menu--horizontal .menu__item {
+        padding-left: .65rem;
+        padding-right: .65rem; } }
+    .menu.menu--horizontal .menu__item a {
+      text-decoration: none; }
+  .menu.menu--vertical {
+    list-style: none; }
+    .menu.menu--vertical li {
+      margin-bottom: 0.75rem; }
+    .menu.menu--vertical a {
+      text-decoration: none;
+      font-size: 0.9rem; }
+
+/*-------------------------*/
+/* 5. Fontawesome CSS
+/*-------------------------*/
+.fa.fa--md {
+  font-size: 140%; }
+  .fa.fa--md.fa-user {
+    font-size: 150%; }
+  @media only screen and (max-width: 575px) {
+    .fa.fa--md {
+      font-size: 120%; }
+      .fa.fa--md.fa-user {
+        font-size: 130%; } }
+
+.fa.fa--lg {
+  font-size: 180%; }
+
+.fa.fa--xl {
+  font-size: 250%; }
+
+/*=================================================================================*/
+/* II. Header Section
+/*=================================================================================*/
+/*-------------------------*/
+/* 1. Navbar
+/*-------------------------*/
+.header__navbar {
+  background-color: #d70018; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem; }
+  .navbar .navbar__menu {
+    height: 3.5rem;
+    display: flex;
+    align-items: center; }
+
+.navbar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .navbar__logo .logo {
+    width: 80px; }
+    @media only screen and (min-width: 576px) {
+      .navbar__logo .logo {
+        width: 100px; } }
+    @media only screen and (min-width: 768px) {
+      .navbar__logo .logo {
+        width: 120px; } }
+    @media only screen and (min-width: 992px) {
+      .navbar__logo .logo {
+        width: 150px; } }
+  @media only screen and (min-width: 992px) {
+    .navbar__logo .bars-btn {
+      display: none; } }
+
+[data-amount] {
+  position: relative; }
+  [data-amount]::after {
+    content: attr(data-amount);
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    display: inline-block;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px; }
+
+/*-------------------------*/
+/* 2. SearchBar
+/*-------------------------*/
+.search-bar {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #b60015;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none; }
+  .search-bar .search-input {
+    width: 80%;
+    height: 2.3rem;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #F3F3F3; }
+    @media only screen and (min-width: 575px) {
+      .search-bar .search-input {
+        width: 80%; } }
+    @media only screen and (min-width: 768px) {
+      .search-bar .search-input {
+        width: 75%; } }
+    @media only screen and (min-width: 991px) {
+      .search-bar .search-input {
+        width: 68%; } }
+
+/*=================================================================================*/
+/* III. Carousel 
+/*=================================================================================*/
+/* external css: flickity.css */
+.gallery {
+  background: #EEE;
+  position: relative; }
+
+.gallery-cell {
+  width: 100%;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell; }
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white; }
+
+.flickity-page-dots {
+  position: absolute;
+  bottom: 5%; }
+  .flickity-page-dots .dot {
+    width: 24px;
+    height: 4px;
+    border-radius: 0; }
+
+.banner .sub-banner, .banner .bottom-banner {
+  width: 100%; }
+  @media only screen and (max-width: 991px) {
+    .banner .sub-banner, .banner .bottom-banner {
+      display: none; } }
+  .banner .sub-banner img, .banner .bottom-banner img {
+    width: 100%; }
+
+/*=================================================================================*/
+/* Product Section
+/*=================================================================================*/
+.box {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.25rem !important;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 2.8rem; }
+  .box .box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem .25rem; }
+    .box .box-title h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+    .box .box-title a {
+      text-decoration: none; }
+
+.product-list .product {
+  width: 50%;
+  display: inline-block;
+  padding: .5rem;
+  border: 1px solid #f3f3f3;
+  text-decoration: none;
+  font-size: .9rem;
+  position: relative; }
+  @media only screen and (min-width: 768px) {
+    .product-list .product {
+      width: 33%; } }
+  @media only screen and (min-width: 991px) {
+    .product-list .product {
+      width: 25%; } }
+  @media only screen and (min-width: 1200px) {
+    .product-list .product {
+      width: 20%; } }
+  .product-list .product:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); }
+  .product-list .product + .product {
+    border-left: none; }
+  .product-list .product .product__img {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+  .product-list .product .product__title {
+    font-weight: 500;
+    color: #4d4d4d; }
+  .product-list .product .product__price {
+    margin: .5rem 0; }
+    .product-list .product .product__price .regular-price {
+      display: inline-block;
+      margin-left: 5px;
+      color: #bf081f;
+      font-weight: 600; }
+    .product-list .product .product__price .sales-price {
+      display: inline-block;
+      color: #bf081f;
+      font-weight: 600; }
+      .product-list .product .product__price .sales-price + .regular-price {
+        font-size: 0.8rem;
+        font-weight: normal;
+        text-decoration: line-through;
+        color: #aaa; }
+  .product-list .product .product__rating .product__rating-icon {
+    font-size: 13px;
+    color: #f69b21; }
+  .product-list .product .product__rating span {
+    font-size: 0.7rem;
+    color: #aaa;
+    display: inline;
+    margin-left: 0.25rem; }
+  .product-list .product .product__box-sticker {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .product-list .product .product__box-sticker .sticker-percent {
+      position: absolute;
+      right: .25rem;
+      top: 1px;
+      width: 40px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px 0 0 !important;
+      margin: 0 !important;
+      line-height: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      background-color: #d70018; }
+      .product-list .product .product__box-sticker .sticker-percent::before {
+        position: absolute;
+        content: " ";
+        bottom: -15px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 15px solid #d70018; }
+
+/*=================================================================================*/
+/* V. Footer Section
+/*=================================================================================*/
+.footer .footer__title {
+  font-size: 1rem;
+  display: block;
+  padding-bottom: .75rem; }
