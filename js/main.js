@@ -37,15 +37,15 @@ function toggleMenuAndSearch() {
                 menuParent.appendChild(menu);
         } else {
             body.appendChild(menu);
-            menu.style.left = "-60%";
+            menu.style.transform = "translateX(-60vw)";
         }
     }
 
     // If bars button is clicked, open menu on left
     document.getElementById("bars-btn").onclick = function () {
         overBodyLayer.style.display = "block";
-        root.style.transform = "translateX(60%)";
-        menu.style.left = "0%";
+        root.style.transform = "translateX(60vw)";
+        menu.style.transform = "translateX(60vw)";
     }
 
     // If search button is clicked, display search bar
@@ -59,7 +59,7 @@ function toggleMenuAndSearch() {
     overBodyLayer.onclick = function () {
         if(getStyleElement(searchBar, "display") === "none") {
             root.style.transform = "translateX(0%)";
-            menu.style.left = "-60%";
+            menu.style.transform = "translateX(-60vw)";
             overBodyLayer.style.display = "none";
         } else {
             searchBar.style.display = "none";

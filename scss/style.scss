@@ -49,6 +49,7 @@ body {
 
 #root {
     transition: 0.4s;
+    transition-delay: 0.05s;
 }
 
 #overlaybody {
@@ -151,10 +152,10 @@ body {
         @media only screen and (max-width: 991px) {
             position: fixed;
             top: 0;
-            left: -60%;
+            left: -60vw;
             z-index: 100;
 
-            width: 60%;
+            width: 60vw;
             height: 100%;
             
             background-color: #fff;
@@ -296,6 +297,7 @@ body {
 
         position: absolute;
         top: -8px;
+
     }
 }
 
