@@ -135,12 +135,12 @@ body {
             color: #000; } }
   .menu.menu--horizontal .menu__item {
     display: inline-block;
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    @media only screen and (max-width: 575px) {
+    padding-left: .65rem;
+    padding-right: .65rem; }
+    @media only screen and (min-width: 400px) {
       .menu.menu--horizontal .menu__item {
-        padding-left: .65rem;
-        padding-right: .65rem; } }
+        padding-left: 1rem;
+        padding-right: 1rem; } }
     .menu.menu--horizontal .menu__item a {
       text-decoration: none; }
   .menu.menu--vertical {
@@ -155,14 +155,9 @@ body {
 /* 5. Fontawesome CSS
 /*-------------------------*/
 .fa.fa--md {
-  font-size: 140%; }
+  font-size: 150%; }
   .fa.fa--md.fa-user {
-    font-size: 150%; }
-  @media only screen and (max-width: 575px) {
-    .fa.fa--md {
-      font-size: 120%; }
-      .fa.fa--md.fa-user {
-        font-size: 130%; } }
+    font-size: 160%; }
 
 .fa.fa--lg {
   font-size: 180%; }
@@ -195,7 +190,7 @@ body {
   align-items: center; }
   .navbar__logo .logo {
     width: 80px; }
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 400px) {
       .navbar__logo .logo {
         width: 100px; } }
     @media only screen and (min-width: 768px) {
