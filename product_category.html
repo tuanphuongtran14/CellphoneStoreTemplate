@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Product Category</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Css Stylesheet --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1850241b68.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./vendors/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+    
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Specific Style -->
+    <style>
+      body{
+        background-color: #F8F9FA;
+      }
+      .grid-container{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        padding: 10px 0;
+        list-style-type: none;
+      }
+      .grid-container > li{ 
+        border: 1px solid lightgray;
+        border-collapse: collapse;
+      }  
+      .card{
+        border: none;
+        padding-top: 10px;
+      }
+      .star-rate {
+        display: inline-block;
+        margin-right: 1rem; }
+        .star-rate .star {
+          font-size: 1rem;
+          color: #c0c0c0; }
+          .star-rate .star.checked {
+            color: #FACA51; }
+      /* =============================== */
+      .footer{
+        border-top: 1px solid black;    
+      }
+
+      .footer__social{
+        /* width:100%; */
+        padding: 0 20px;
+        /* border-radius:10px; */
+      }
+
+      .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+        width: 125px; 
+        background-color: #d62d20!important;
+        /* height: 1px; */
+      }
+
+      footer .footer__hr{
+        background-color: #d62d20; 
+        width: 80%;
+        /* height: 10px;  */
+        margin: 10px 10%;
+      }
+
+      .footer__bottom{
+        justify-content: space-between
+      }
+
+      .footer__bottom-sub{
+        padding-left: 0!important;
+      }
+
+      .footer__bottom-social{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+
+      .footer__bottom-copyright{
+        justify-content: flex-end;
+        align-items: center;
+        padding-right:0!important;
+      }
+
+      @media(max-width : 576px){
+        .grid-container{
+          grid-template-columns: 50% 50%;
+        }
+
+        .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+            width: 80%;
+        }
+
+        .footer__bottom{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer__bottom-sub,
+        .footer__bottom-social,
+        .footer__bottom-copyright{
+            width: 100%;
+        }
+
+        .footer__bottom-social{
+            display: none!important;
+        }
+
+        .footer__bottom-sub {
+            text-align: center!important;
+        }
+
+        .footer__bottom-copyright{
+            justify-content: center!important;
+        }
+      }
+
+      @media (min-width : 576px) and (max-width: 990px){
+        .grid-container{ 
+          grid-template-columns: 33.33% 33.33% 33.33%;
+        }
+      }
+
+      @media (min-width : 576px) and (max-width: 974px){
+        .footer__menu-top{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .footer__menu-col1,
+        .footer__menu-col2,
+        .footer__menu-col3,
+        .footer__menu-col4,
+        .footer__menu-col5{
+            max-width: 100%!important;
+        }
+
+        .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+            width: 80%;
+        }
+
+        .footer__bottom-copyright{
+            justify-content: center!important;
+        }
+
+      }
+
+      /* The progress container (grey background) */
+      .progress-container {
+        width: 100%;
+        height: 3px;
+        background: #ccc;
+      }
+
+      /* The progress bar (scroll indicator) */
+      .progress-bar {
+        height: 3px ;
+        background: #038744!important;
+      }
+    </style>
+  </head>
+<!-- ------------------------------------------------------------------------------------------------- -->
+    
+  <body> 
+    <div class="header__navbar sticky-top">
+      <nav class="navbar--custom container px-0">
+          <div class="navbar__logo">
+              <a class="text-white ml-3 mr-4 bars-btn" id="bars-btn">
+                  <i class="fa fa-bars fa--md" aria-hidden="true"></i>
+              </a>
+              <a href="/"><img src="./img/logo.png" class="logo" alt=""></a>
+          </div>
+          <div class="navbar__menu" id="navbar-menu">
+              <ul class="menu menu--nav" id="menu--nav">
+                  <li class="menu__item">
+                      <a href="http://uitstyle.xyz" class="text-white">Trang chủ</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Sản phẩm</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Về chúng tôi</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Tin tức</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Liên hệ</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="navbar__others">
+              <ul class="menu menu--horizontal">
+                  <li class="menu__item">
+                      <a class="text-white" id="search-btn">
+                          <i class="fa fa-search fa--md" aria-hidden="true"></i>
+                      </a>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-heart fa--md" aria-hidden="true" data-amount="0"></i>
+                      </a>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-shopping-bag fa--md" data-amount="0" aria-hidden="true"></i>
+                      </a>
+                  </li>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-user fa--md" aria-hidden="true"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  
+    <!-- SCROLL INDICATOR -->
+    <div class="progress-container w-100 mt-3 mx-0">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </div>
+
+  <div class="container px-0 banner">
+      <div class="carousel row mx-0">
+          <div class="col-12 col-lg-8 px-0">
+              <div class="gallery js-flickity " data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                  <img class="gallery-cell" src="./img/banner/ROG_Phone_Sliding_desk.webp" alt="">
+                  <img class="gallery-cell" src="./img/banner/690x300_Buds_.webp" alt="">
+                  <img class="gallery-cell" src="./img/banner/mg-6690x300.webp" alt="">
+                  <img class="gallery-cell" src="./img/banner/IMG_20210515_220924_947.webp" alt="">
+              </div>
+          </div>
+          <div class="sub-banner col-12 col-lg-4 px-0">
+              <div class="col-12 mb-2 pr-0">
+                  <img src="./img/banner/iPhone_12_690x300_copy_3_.webp" alt="">
+              </div>
+              <div class="col-12 pr-0">
+                  <img src="./img//banner/Right_banner.jpg" alt="">
+              </div>
+          </div>
+          <div class="col-12 bottom-banner px-0 mt-2">
+              <img src="./img/banner/bottom-banner.png" alt="">
+          </div>
+      </div>
+  </div>
+
+      
+    </header>
+    
+    
+    <!-- HEADER END -->
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- BODY --> 
+
+    <div class="container bg-white mb-5">
+      <div class="d-block py-3">
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Hãng...</option>
+          <option value="">Iphone</option>
+          <option value="">SamSung</option>
+          <option value="">Oppo</option> 
+        </select>
+
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Giá...</option>
+          <option value="">Dưới 2 triệu</option>
+          <option value="">Từ 2 đến 4 triệu</option>
+          <option value="">Từ 4 đến 7 triệu</option>
+          <option value="">Từ 7 đến 13 triệu</option>
+          <option value="">Từ 13 đến 20 triệu</option>
+          <option value="">Trên 20 triệu</option>
+        </select>
+
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Hiệu năng & Pin...</option>
+          <option value="">Chơi game / Cấu hình cao</option>
+          <option value="">Pin khủng trên 5000 mAh</option>
+          <option value="">Sạc pin nhanh</option>
+          
+        </select>
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Ram...</option>
+          <option value="">Dưới 4 GB</option>
+          <option value="">4 - 6 GB</option>
+          <option value="">8 GB trở lên</option>
+          
+        </select>
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Bộ nhớ trong...</option>
+          <option value="">Dưới 32 GB</option>
+          <option value="">32 - 64 GB</option>
+          <option value="">128 - 256 GB</option>
+          <option value="">512 GB trở lên</option>
+        </select>
+       
+        <select name="" id="" class="d-inline-block mr-2 my-2" style="border: 1px solid lightgray; border-radius: 5px; cursor: pointer; padding: 8px 10px; "> 
+          <option selected>Tính năng đặc biệt...</option>
+          <option value="">Hỗ trợ 5G</option>
+          <option value="">Bảo mật khuôn mặt</option>
+          <option value="">Bảo mật vân tay</option>
+          <option value="">Sạc không dây</option>
+          <option value="">Chống nước, bụi</option>
+        </select>
+      </div>
+
+      <ul class="grid-container w-100">
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-violet-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Iphone 12</h4>
+              <p class="card-text">23.490.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/229056/oppo-a93-trang-14-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo A93</h4>
+              <p class="card-text">5.999.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/220438/oppo-reno5-trang-600x600-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo Reno5</h4>
+              <p class="card-text">8.690.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213033/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo 12 Pro Max 128GB</h4>
+              <p class="card-text">31.990.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/228950/vivo-y51-bac-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Vivo Y51 (2020)</h4>
+              <p class="card-text">5.790.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-violet-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Iphone 12</h4>
+              <p class="card-text">23.490.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/229056/oppo-a93-trang-14-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo A93</h4>
+              <p class="card-text">5.999.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/220438/oppo-reno5-trang-600x600-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo Reno5</h4>
+              <p class="card-text">8.690.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213033/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo 12 Pro Max 128GB</h4>
+              <p class="card-text">31.990.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/228950/vivo-y51-bac-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Vivo Y51 (2020)</h4>
+              <p class="card-text">5.790.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-violet-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Iphone 12</h4>
+              <p class="card-text">23.490.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/229056/oppo-a93-trang-14-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo A93</h4>
+              <p class="card-text">5.999.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/220438/oppo-reno5-trang-600x600-1-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo Reno5</h4>
+              <p class="card-text">8.690.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/213033/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Oppo 12 Pro Max 128GB</h4>
+              <p class="card-text">31.990.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img class="card-img-top" src="https://cdn.tgdd.vn/Products/Images/42/228950/vivo-y51-bac-600x600-600x600.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Vivo Y51 (2020)</h4>
+              <p class="card-text">5.790.000 VND</p>
+              <span class="star-rate">
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star checked"></span>
+                <span class="star fa fa-star"></span>
+              </span>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+
+      <nav aria-label="..." style="display: flex; justify-content: center">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+    <!-- BODY END -->
+
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto bg-white text-dark"> 
+      <div class="footer__menu container text-dark text-left text-md-left pt-5">
+        <div class="footer__menu-top row">
+
+          <!-- COLUMN 1 -->
+          <div class="footer__menu-col1 col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">The Providers</h6>
+            <hr class="col1__hr  d-inline-block mx-auto " >
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat in voluptatum assumenda pariatur ad quae quidem natus non doloremque, eos repellendus accusamus quod molestiae reprehenderit? Quidem consequatur dicta aliquam.</p>
+          </div>
+
+          <!-- COLUMN 2 -->
+          <div class="footer__menu-col2 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">About us</h6>
+            <hr class="col2__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled ">
+              <li class="my-2 "><a href="#" class="text-dark">HTML</a></li>
+              <li class="my-2"><a href="#" class="text-dark">CSS</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Bootstrap</a></li>
+              <li class="my-2"><a href="#" class="text-dark">JavaScript</a></li>
+            </ul> 
+          </div>
+
+          <!-- COLUMN 3 -->
+          <div class="footer__menu-col3 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Customer care</h6>
+            <hr class="col3__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled">
+              <li class="my-2"><a href="#" class="text-dark">Home</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Abouts</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Services</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Contact</a></li>
+            </ul> 
+          </div>
+
+          <!-- COLUMN 4 -->
+          <div class="footer__menu-col4 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Contact us</h6>
+            <hr class="col4__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled">
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-home mr-3"></i>Karachi, Street 4</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-envelope mr-3"></i>unlimited@gmail.com</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-phone mr-3"></i>0912245678</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-print mr-3"></i>0987654221</a></li>
+            </ul>
+          </div>
+
+          <!-- COLUMN 5 -->
+          <div class="footer__menu-col5 col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr class="col5__hr d-inline-block mx-auto " >
+            <form class="mb-3 mb-lg-0">
+              <input type="search" name="" id="" class="form-control form-conrol-dark" placeholder="Search ..." style="border-color: black">
+            </form>
+            <div class="d-flex justify-content-between mt-2">
+              <i class="fab fa-cc-paypal fa-3x"></i>
+              <i class="fab fa-cc-amex fa-3x"></i>
+              <i class="fab fa-cc-visa fa-3x"></i>
+              <i class="fab fa-cc-mastercard fa-3x"></i>
+            </div>
+          </div>
+        </div>
+      </div>        
+      
+      <!-- Horizon Rule -->
+      <hr class="footer__hr">
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer__bottom container text-dark d-flex flex-wrap justify-content-between pb-4">
+        <div class="footer__bottom-sub col-lg-4 mr-lg-auto">
+          <p class="w-100 d-block pt-2">Subcribe for more newsletter:</p>
+          <p class="d-block">
+            <form class="mb-3 mb-lg-0 w-70">
+              <input type="search" name="" id="" class="form-control form-conrol-dark" placeholder="Enter your email here ... " style="border-color: black">
+            </form>
+          </p> 
+        </div>
+
+        <div class="footer__bottom-social col-lg-4 py-4 mr-lg-auto">
+          <div class="text-center py-auto" >
+            <a href="#"><i class="fab fa-facebook-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-youtube-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-instagram-square fa-2x text-dark"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__bottom-copyright col-lg-4 py-3 d-flex">
+          <p class="d-block">
+            <a href="#" class="text-dark text-decoration-none">Terms and Conditions </a>&nbsp||&nbsp
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>&nbsp||&nbsp
+            <a href="#" class="text-dark text-decoration-none">Sitemap</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+   
+    <!-- Optional JavaScript -->
+    <script src="./vendors/flickity.pkgd.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        window.onload = function () {
+            playSlider();
+            toggleMenuAndSearch();
+        }
+    </script> 
+    <script>
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JS OF SCROLL INDICATOR -->
+  </body>
+</html>
