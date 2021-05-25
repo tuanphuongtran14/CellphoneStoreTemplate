@@ -32,9 +32,11 @@ function toggleMenuAndSearch() {
     window.onresize = function () {
         if (window.innerWidth >= 992) {
             root.style.transform = "translateX(0%)";
-            if (getStyleElement(searchBar, "display") === "none")
+            if (getStyleElement(searchBar, "display") === "none") {
                 overBodyLayer.style.display = "none";
                 menuParent.appendChild(menu);
+                menu.style.transform = "none";
+            }    
         } else {
             body.appendChild(menu);
             menu.style.transform = "translateX(-60vw)";
