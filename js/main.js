@@ -1,8 +1,24 @@
+window.onload = function() {
+    toggleMenuAndSearch();
+
+    playSlider();
+
+    selectByThumbnail();
+
+    if(document.getElementById('versions'))
+        selectVersions('versions');
+
+    if(document.getElementById('colors'))
+        selectVersions('colors');
+}
+
 function playSlider() {
-    var carousel = new Flickity( '.gallery', {
-        autoPlay: 5000
-    });
-    carousel.playPlayer();
+    if(document.querySelector('.gallery')) {
+        var carousel = new Flickity( '.gallery', {
+            autoPlay: 5000
+        });
+        carousel.playPlayer();
+    }
 }
 
 function toggleMenuAndSearch() {
@@ -85,25 +101,26 @@ function getStyleElement(element,styleProp)
 
 function selectByThumbnail() {
     var thumbnails = document.getElementsByClassName('thumbnail');
-    var flkty = new Flickity('.product-images__slide');
 
-    flkty.on( 'change', function(index) {
-        document.querySelector(".thumbnail.active").classList.remove("active");
-        thumbnails[index].classList.add("active");
-    });
+    if(thumbnails) {
+        var flkty = new Flickity('.product-images__slide');
 
-    for(let i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].onclick = function() {
+        flkty.on( 'change', function(index) {
             document.querySelector(".thumbnail.active").classList.remove("active");
-            this.classList.add("active");
-            flkty.select( i, true, false )
+            thumbnails[index].classList.add("active");
+        });
+
+        for(let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].onclick = function() {
+                document.querySelector(".thumbnail.active").classList.remove("active");
+                this.classList.add("active");
+                flkty.select( i, true, false )
+            }
         }
     }
 }
 
 function selectVersions(id) {
-    console.log('Start');
-
     var versions = document.querySelectorAll(`#${id} .version`);
     console.log(versions);
 

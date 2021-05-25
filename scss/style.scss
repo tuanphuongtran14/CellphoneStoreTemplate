@@ -33,6 +33,7 @@ IV.
 
 * {
     font-family: sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -120,12 +121,12 @@ body {
 }
 
 .text-red {
-    color: #d70018;
+    color: #d70018!important;
 }
 
 
 .text-blue {
-    color: #0357e7;
+    color: #0357e7!important;
 }
 
 .text-right {
@@ -138,6 +139,12 @@ body {
 
 .bg-info {
     background-color: #17a2b8!important;
+}
+.border--custom, .border-left--custom {
+    border-left: 20px solid #F0F0F0;
+}
+.border--custom, .border-top--custom {
+    border-top: 20px solid #F0F0F0;
 }
 /*-------------------------*/
 /* 4. Menu
@@ -317,14 +324,26 @@ body {
     }
 }
 
+.nav--custom {
+    justify-content: center;
+    margin-top: 0.5rem;
+    // background-color: transparent!important;
+    color: #000000;
+    padding: 0.5rem 0;
+
+    .nav-link {
+        &.active {
+            background-color: transparent !important;
+            color: #000 !important;
+            border-bottom: 3px solid #eb0028;
+            border-radius: 0 !important;
+        }
+    }
+}
 /*-------------------------*/
 /* 2. Breadcrumb
 /*-------------------------*/
 .breadcrumb--custom {
-    // box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-    // border-radius: .25rem!important;
-
-    // background-color: #fff!important;
     background-color: transparent!important;
 
     .breadcrumb-item {
@@ -409,15 +428,6 @@ background: #d70018;
 counter-increment: gallery-cell;
 }
 
-// /* cell number */
-// .gallery-cell:before {
-// display: block;
-// text-align: center;
-// content: counter(gallery-cell);
-// line-height: 200px;
-// font-size: 80px;
-// color: white;
-// }
 
 .flickity-page-dots {
     position: absolute;
@@ -430,23 +440,6 @@ counter-increment: gallery-cell;
         border-radius: 0;
     }
 }
-// .flickity-prev-next-button {
-//     width: 30px;
-//     height: 30px;
-//     border-radius: 5px;
-//     background: #333;
-//   }
-
-// .flickity-prev-next-button:hover {
-//     background: #F90;
-//   }
-//   /* arrow color */
-//   .flickity-prev-next-button .arrow {
-//     fill: white;
-//   }
-//   .flickity-prev-next-button.no-svg {
-//     color: white;
-//   }
 
 //   Subbanner & Bottom Banner
 .banner {
@@ -705,7 +698,6 @@ counter-increment: gallery-cell;
         }
 
         .product-images__thumbnails {
-            max-height: 4.5rem;
             display: flex;
             justify-content: space-between;
 
@@ -818,5 +810,9 @@ counter-increment: gallery-cell;
             }
         }
     }
-
+    .product-detail__others, .product-details__related {
+        border-top: 1rem solid #F0F0F0;
+    }
 }
+
+

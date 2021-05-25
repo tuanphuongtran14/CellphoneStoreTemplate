@@ -31,6 +31,7 @@ IV.
 /*=================================================================================*/
 * {
   font-family: sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -94,10 +95,10 @@ body {
   color: white; }
 
 .text-red {
-  color: #d70018; }
+  color: #d70018 !important; }
 
 .text-blue {
-  color: #0357e7; }
+  color: #0357e7 !important; }
 
 .text-right {
   text-align: right; }
@@ -107,6 +108,12 @@ body {
 
 .bg-info {
   background-color: #17a2b8 !important; }
+
+.border--custom, .border-left--custom {
+  border-left: 20px solid #F0F0F0; }
+
+.border--custom, .border-top--custom {
+  border-top: 20px solid #F0F0F0; }
 
 /*-------------------------*/
 /* 4. Menu
@@ -228,6 +235,17 @@ body {
     border-radius: 50%;
     position: absolute;
     top: -8px; }
+
+.nav--custom {
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: #000000;
+  padding: 0.5rem 0; }
+  .nav--custom .nav-link.active {
+    background-color: transparent !important;
+    color: #000 !important;
+    border-bottom: 3px solid #eb0028;
+    border-radius: 0 !important; }
 
 /*-------------------------*/
 /* 2. Breadcrumb
@@ -476,7 +494,6 @@ body {
       .product-details .product-details__images .product-images__slide .flickity-prev-next-button.next {
         right: -5px; }
     .product-details .product-details__images .product-images__thumbnails {
-      max-height: 4.5rem;
       display: flex;
       justify-content: space-between;
       width: 100%; }
@@ -553,3 +570,5 @@ body {
         display: block; }
       .product-details .product-details__versions .version.active {
         border: 1px solid #d70018; }
+  .product-details .product-detail__others, .product-details .product-details__related {
+    border-top: 1rem solid #F0F0F0; }
