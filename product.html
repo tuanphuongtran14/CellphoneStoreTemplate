@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./vendors/flickity.min.css">
     <!-- Optional CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body id="body">
@@ -80,8 +80,8 @@
             </div>
         </nav>
         
-        <article class="container product-details">
-            <section class="row mx-0 px-0">
+        <article class="container product-details bg-white">
+            <section class="row mx-0 py-2">
                 <h1 class="col-12 col-lg-6 product-details__name">
                     Apple iPhone 12 Pro 128GB Chính hãng VN/A
                 </h1>
@@ -95,20 +95,20 @@
                         <i class="fa fa-star checked"></i>
                     </span>
                     <span>
-                        4 Đánh giá | 3 Bình luận
+                        4 Đánh giá | <a href="">Nhận xét ngay</a>
                     </span>
                 </div>
                          
             </section>
             <section class="row mx-0">
-                <div class="product-details__images px-0 px-md-2 col-12 col-lg-4 col-xl-4 mb-3">
-                    <div class="product-images__slide js-flickity " data-flickity-options='{ "freeScroll": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false }'>
+                <div class="product-details__images px-0 px-md-2 col-12 col-lg-4 col-xl-4 mb-3 ">
+                    <div class="product-images__slide js-flickity mb-2" data-flickity-options='{ "freeScroll": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false }'>
                         <img class="product-image" src="./img/products/details/iphone-12-pro-max-1.png" alt="">
                         <img class="product-image" src="./img/products/details/iphone-12-pro-max-2.png" alt="">
                         <img class="product-image" src="./img/products/details/iphone-12-pro-max-3.png" alt="">
                         <img class="product-image" src="./img/products/details/iphone-12-pro-max-4.png" alt="">
                     </div>
-                    <div class="product-images__thumbnails">
+                    <div class="product-images__thumbnails px-4">
                         <img class="thumbnail active" src="./img/products/details/iphone-12-pro-max-1.png" alt="">
                         <img class="thumbnail" src="./img/products/details/iphone-12-pro-max-2.png" alt="">
                         <img class="thumbnail" src="./img/products/details/iphone-12-pro-max-3.png" alt="">
@@ -161,13 +161,13 @@
                                 &nbsp; Mua ngay
                             </button>
                         <div class="col-6 pl-0 pr-1">
-                            <button class="btn btn-success">
+                            <button class="btn btn-success w-100">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                 &nbsp; Thêm vào giỏ hàng
                             </button>
                         </div>
                         <div class="col-6 pr-0 pl-1">
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary w-100">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 &nbsp; Thêm vào yêu thích
                             </button>
@@ -178,10 +178,11 @@
                     <b>Khuyến mãi: </b>
                     <div>
                         <ul class="product-details__bonus">
-                            <li>Tặng voucher mua hàng trị giá 100.000đ</li>
-                            <li>Tặng voucher sửa chữa trị giá 50.000</li>
-                            <li>Tặng sạc chính hãng 18W trị giá 350.000đ</li>
+                            <li>Tặng voucher mua hàng trị giá 2000.000đ</li>
+                            <li>Tặng voucher sửa chữa trị giá 500.000</li>
+                            <li>Tặng sạc chính hãng 18W trị giá 550.000đ</li>
                             <li>Tặng sim ghép Fix full lỗi trị giá 120.000đ</li>
+                            <li>Tặng nón bảo hiểm cao cấp</li>
                         </ul>
                     </div>
                     <div class="mt-2">
@@ -192,7 +193,7 @@
                     <div class="mt-2">
                         <b>Hộp bao gồm</b>
                         <br>
-                        <span class="text-justify">Thân máy, cáp USB-C to Lightning, sách HDSD</span>
+                        <span class="text-justify">Thân máy, cáp USB-C to Lightning, sách HDSD <br />Ốp lưng chất liệu nhựa dẻo cao cấp </span>
                     </div>
                     <div class="mt-2">
 						<b>Bảo hành</b>
@@ -203,8 +204,8 @@
             </section>
         </article>
         <article class="container row mx-auto px-0">
-            <div class="col-8 bg-white border-top--custom"">
-                <ul class="nav--custom nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <div class="col-12 col-lg-8 bg-white bd-top--fake-bg px-0 ">
+                <ul class="nav--custom nav nav-pills my-2" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-desc" role="tab" aria-controls="pills-desc" aria-selected="true">Mô tả</a>
                     </li>
@@ -213,9 +214,6 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-reviews" role="tab" aria-controls="pills-reviews" aria-selected="false">Đánh giá</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-comments" role="tab" aria-controls="pills-comments" aria-selected="false">Bình luận</a>
                     </li>
                 </ul>
                 <div class="tab-content container" id="pills-tabContent">
@@ -334,103 +332,88 @@
     
                     <!-- Product Reviews Tablist Content Start -->
                     <div class="customer-reviews tablist_content tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-                        <div class="border--all row mx-0 mb-1 padding-x py-3">
-                            <div class="customer-reviews__overviews col-6">
+                        <div class="d-flex justify-content-between row mx-0 p-3 border">
+                            <div class="customer-reviews__overviews">
                                 <span class="overviews__grade">4.5/5</span>
-                                <span class="overviews__star-rating star-rating">
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star" aria-hidden="true"></span>
+                                <span class="rating-result">
+                                    <i class="fa fa-star checked" aria-hidden="true"></i>
+                                    <i class="fa fa-star checked" aria-hidden="true"></i>
+                                    <i class="fa fa-star checked" aria-hidden="true"></i>
+                                    <i class="fa fa-star checked" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-empty checked" aria-hidden="true"></i>
                                 </span>
-                                <span class="overviews__quantity-reviews">4 Đánh giá</span>
+                                <span class="overviews__quantity-reviews mt-1">4 Đánh giá</span>
                             </div>
-                            <div class="customer-reviews__rating-detail col-6">
-                                <div class="rating-detail__section">
-                                    <span class="section__star-rating star-rating">
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
+                            <div class="customer-reviews__details">
+                                <div class="rating-details">
+                                    <span class="rating-result">
+                                        5
+                                        <i class="fa fa-star checked" aria-hidden="true"></i>
                                     </span>
-                                    <div class="section__rate-status">
-                                        <div class="section__rate-progress" style="width: 50%"></div>
+                                    <div class="rate-status">
+                                        <div class="rate-status__progress" style="width: 50%"></div>
                                     </div>
-                                    <span class="section__rating-count">(2)</span>
+                                    <span class="rating__ratio">50%</span>
                                 </div>
-                                <div class="rating-detail__section">
-                                    <span class="section__star-rating star-rating">
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
+                                <div class="rating-details">
+                                    <span class="rating-result">
+                                        4
+                                        <i class="fa fa-star checked" aria-hidden="true"></i>
                                     </span>
-                                    <div class="section__rate-status">
-                                        <div class="section__rate-progress" style="width: 50%"></div>
+                                    <div class="rate-status">
+                                        <div class="rate-status__progress" style="width: 50%"></div>
                                     </div>
-                                    <span class="section__rating-count">(2)</span>
+                                    <span class="rating__ratio">50%</span>
                                 </div>
-                                <div class="rating-detail__section">
-                                    <span class="section__star-rating star-rating">
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
+                                <div class="rating-details">
+                                    <span class="rating-result">
+                                        3
+                                        <i class="fa fa-star checked" aria-hidden="true"></i>
                                     </span>
-                                    <div class="section__rate-status">
-                                        <div class="section__rate-progress" style="width: 0%"></div>
+                                    <div class="rate-status">
+                                        <div class="rate-status__progress" style="width: 0%"></div>
                                     </div>
-                                    <span class="section__rating-count">(0)</span>
+                                    <span class="rating__ratio">0%</span>
                                 </div>
-                                <div class="rating-detail__section">
-                                    <span class="section__star-rating star-rating">
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
+                                <div class="rating-details">
+                                    <span class="rating-result">
+                                        2
+                                        <i class="fa fa-star checked" aria-hidden="true"></i>
                                     </span>
-                                    <div class="section__rate-status">
-                                        <div class="section__rate-progress" style="width: 0%"></div>
+                                    <div class="rate-status">
+                                        <div class="rate-status__progress" style="width: 0%"></div>
                                     </div>
-                                    <span class="section__rating-count">(0)</span>
+                                    <span class="rating__ratio">0%</span>
                                 </div>
-                                <div class="rating-detail__section">
-                                    <span class="section__star-rating star-rating">
-                                        <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
-                                        <span class="star fa fa-star" aria-hidden="true"></span>
+                                <div class="rating-details">
+                                    <span class="rating-result">
+                                        1
+                                        <i class="fa fa-star checked" aria-hidden="true"></i>
                                     </span>
-                                    <div class="section__rate-status">
-                                        <div class="section__rate-progress" style="width: 0%"></div>
+                                    <div class="rate-status">
+                                        <div class="rate-status__progress" style="width: 0%"></div>
                                     </div>
-                                    <span class="section__rating-count">(0)</span>
+                                    <span class="rating__ratio">0%</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="border--all row mx-0 mb-1 padding-x py-3">
-                            <form action="" class="col-12">
-                                <p class="font-weight-bold mb-2">Đánh giá sản phẩm này</p>
+                        <!-- <div class="row px-0 mx-0 mb-1 py-3"> -->
+                            <form action="" class="px-0">
+                                <p class="font-weight-bold my-2">Đánh giá sản phẩm này</p>
                                 <div class="form-group w-100">
                                     <label for="">Đánh giá của bạn: </label>
-                                    <span class="star-rating" id="customer-rating">
-                                        <span class="star-o fa fa-star-o" aria-hidden="true"></span>
-                                        <span class="star-o fa fa-star-o" aria-hidden="true"></span>
-                                        <span class="star-o fa fa-star-o" aria-hidden="true"></span>
-                                        <span class="star-o fa fa-star-o" aria-hidden="true"></span>
-                                        <span class="star-o fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="rating-result">
+                                        <i class="fa fa-star-o checked" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o checked" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o checked" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o checked" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o checked" aria-hidden="true"></i>
                                     </span>
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
-                                    <button type="submit" class="btn btn--black">Submit</button>
+                                    <textarea class="form-control mb-3" name="" id="" rows="3"></textarea>
+                                    <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </form>
-                        </div>
+                        <!-- </div> -->
                         <div class="row mx-0 padding-x my-3">
                             <p class="d-inline-block mr-5">Sắp xếp theo: </p>
                             <div class="form-check mr-5">
@@ -446,209 +429,79 @@
                                 </label>
                             </div>
                         </div>
-    
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-12 row mb-1">
-                                <div class="username col-12 col-md-6 mb-2">
-                                    <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                    tuanphuongtran14
+                        <div class="comment border p-3 my-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="username">
+                                    <!-- <img class="avatar mr-2" src="https://via.placeholder.com/100" alt=""> -->
+                                    Trần Tuấn Phương
                                 </div>
-                                <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
+                                <div class="posted-time">
                                     <span>3 ngày trước</span>
                                     <span>19/4/2020</span>
                                 </div>
                             </div>
-                            <div class="col-12 mb-1">
-                                <span class="star-rating">
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star" aria-hidden="true"></span>
-                                </span>
-                            </div>
-                            <div class="col-12">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                hic totam!
-                            </div>
+                            <span class="rating-result">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                            </span>
+                            <p class="content">
+                                Cho mình hỏi khung nhôm và khung thép không gỉ thì khung nào tốt hơn và ít bị trầy hơn?
+                            </p>
                         </div>
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-12 row mb-1">
-                                <div class="username col-12 col-md-6 mb-2">
-                                    <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                    tuanphuongtran14
+                        <div class="comment border p-3 my-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="username">
+                                    <!-- <img class="avatar mr-2" src="https://via.placeholder.com/100" alt=""> -->
+                                    Võ Yến Nhi
                                 </div>
-                                <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
+                                <div class="posted-time">
+                                    <span>4 ngày trước</span>
+                                    <span>18/4/2020</span>
+                                </div>
+                            </div>
+                            <span class="rating-result">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                            </span>
+                            <p class="content">
+                                Mình muốn mua trả góp từ bao nhiêu tuổi thì được?
+                            </p>
+                        </div>
+                        <div class="comment border p-3 my-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="username">
+                                    <!-- <img class="avatar mr-2" src="https://via.placeholder.com/100" alt=""> -->
+                                    Nguyễn Anh Tuấn
+                                </div>
+                                <div class="posted-time">
                                     <span>3 ngày trước</span>
                                     <span>19/4/2020</span>
                                 </div>
                             </div>
-                            <div class="col-12 mb-1">
-                                <span class="star-rating">
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star" aria-hidden="true"></span>
-                                </span>
-                            </div>
-                            <div class="col-12">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                hic totam!
-                            </div>
-                        </div>
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-12 row mb-1">
-                                <div class="username col-12 col-md-6 mb-2">
-                                    <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                    tuanphuongtran14
-                                </div>
-                                <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
-                                    <span>3 ngày trước</span>
-                                    <span>19/4/2020</span>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-1">
-                                <span class="star-rating">
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star checked" aria-hidden="true"></span>
-                                    <span class="star fa fa-star" aria-hidden="true"></span>
-                                </span>
-                            </div>
-                            <div class="col-12">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                hic totam!
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Reviews Tablist Content End -->
-    
-                    <div class="tab-pane fade" id="pills-comments" role="tabpanel" aria-labelledby="pills-comments-tab">
-                        <div class="border--all row mx-0 mb-1 padding-x py-3">
-                            <form action="" class="col-12">
-                                <p class="font-weight-bold mb-2">Bình luận về sản phẩm này</p>
-                                <div class="form-group w-100">
-                                  <label for="">Tên của bạn</label>
-                                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-                                  <label for="">Email của bạn</label>
-                                  <input type="email" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="">Nội dung bình luận: </label>
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
-                                    <button type="submit" class="btn btn--black">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="row mx-0 padding-x my-3 ">
-                            <div class="col-12 col-md-8">
-                                <p class="d-inline-block mr-3 ">Sắp xếp theo: </p>
-                                <div class="form-check mr-3 d-inline-block">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="sort" id="sort-positive" value="checkedValue" checked="">
-                                        Nhiều vote nhất
-                                    </label>
-                                </div>
-                                <div class="form-check mr-3 d-inline-block">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="sort" id="sort-negative" value="checkedValue">
-                                        Ít vote nhất
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="input-group">
-                                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
-                                    <span class="input-group-text border-0" id="search-addon">
-                                      <i class="fa fa-search" aria-hidden="true"></i>
-                                    </span>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                                <i class="vote_controller fa fa-caret-up" aria-hidden="true"></i>
-                                10
-                                <i class="vote_controller fa fa-caret-down" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-11 row">
-                                <div class="col-12 row mb-1">
-                                    <div class="username col-12 col-md-6 mb-2">
-                                        <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                        tuanphuongtran14
-                                    </div>
-                                    <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
-                                        <span>3 ngày trước</span>
-                                        <span>19/4/2020</span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                    sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                    hic totam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                                <i class="vote_controller active fa fa-caret-up" aria-hidden="true"></i>
-                                10
-                                <i class="vote_controller fa fa-caret-down" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-11 row">
-                                <div class="col-12 row mb-1">
-                                    <div class="username col-12 col-md-6 mb-2">
-                                        <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                        tuanphuongtran14
-                                    </div>
-                                    <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
-                                        <span>3 ngày trước</span>
-                                        <span>19/4/2020</span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                    sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                    hic totam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border--all padding-x py-2 row mx-0 mb-1">
-                            <div class="col-1 d-flex flex-column justify-content-center align-items-center">
-                                <i class="vote_controller fa fa-caret-up" aria-hidden="true"></i>
-                                10
-                                <i class="vote_controller fa fa-caret-down" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-11 row">
-                                <div class="col-12 row mb-1">
-                                    <div class="username col-12 col-md-6 mb-2">
-                                        <img class="avatar" src="https://via.placeholder.com/100" alt="">
-                                        tuanphuongtran14
-                                    </div>
-                                    <div class="posted-time col-12 col-md-6 mb-2 align-right align-right--md">
-                                        <span>3 ngày trước</span>
-                                        <span>19/4/2020</span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae delectus nihil expedita
-                                    sequi aut omnis ea quam, recusandae ipsa atque placeat nulla nobis deserunt animi sed labore
-                                    hic totam!
-                                </div>
-                            </div>
+                            <span class="rating-result">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                            </span>
+                            <p class="content">
+                                Cho hỏi giờ muốn đổi ip12 xanh lá qua đen bù bao nhiêu tiền mua chưa được tháng
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4 bg-white border-left--custom border-top--custom">
-                <h5 class="nav--custom nav">Sản phẩm liên quan</h5>
-                <div class="product-list">
-                    <a href="./product-detail.html" class="product w-100">
+            <div class="col-12 col-lg-4 bg-white bd-top-left--fake-bg">
+                <h2 class="title text-center my-3">Sản phẩm liên quan</h5>
+                <div class="related-products row mx-0 pb-3">
+                    <a href="./product-detail.html" class="product col-6 col-md-3 col-lg-10 col-xl-9">
                         <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
                         <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
                         <div class="product__price">
@@ -667,24 +520,82 @@
                             <p class="sticker-percent">-12%</p>
                         </div>
                     </a>
+                    <a href="./product-detail.html" class="product col-6 col-md-3 col-lg-10 col-xl-9">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product col-6 col-md-3 col-lg-10 col-xl-9">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    <a href="./product-detail.html" class="product col-6 col-md-3 col-lg-10 col-xl-9">
+                        <img src="./img/products/thumb_IP12Pro_VN_1-300x300.jpg" alt="" class="product__img mb-4">
+                        <span class="product__title">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+                        <div class="product__price">
+                            <span class="sales-price">8.990.000₫</span>
+                            <span class="regular-price">9.490.000₫</span>
+                        </div>
+                        <div class="product__rating">
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon fa-star" aria-hidden="true"></i>
+                            <i class="fa product__rating-icon  fa-star-half" aria-hidden="true"></i>
+                            <span>(472 đánh giá)</span>
+                        </div>
+                        <div class="product__box-sticker">
+                            <p class="sticker-percent">-12%</p>
+                        </div>
+                    </a>
+                    
                 </div>
             </div>
         </article>
 
-        <footer class="footer mt-auto bg-dark"> 
+        <footer class="footer mt-auto bg-dark--custom"> 
             <div class="container text-white text-left text-md-left pt-5">
               <div class="row">
                 <!-- COLUMN 1 -->
                 <div class="col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN HỖ TRỢ</h6>
                   <ul class="menu menu--vertical">
-                    <li><a class="text-white href="/chinh-sach-bao-hanh/" title="Chính sách bảo hành">Chính sách bảo hành</a></li>
-					<li><a class="text-white href="/chinh-sach-bao-hanh-iphone-ipad/" title="Chính sách bảo hành iPhone - iPad">Chính sách bảo hành iPhone - iPad</a></li>
-                    <li><a class="text-white href="chinh-sach-doi-tra-hang/" title="Chính sách đổi trả hàng">Bảo hành Xiaomi chính hãng</a></li>
-					<li><a class="text-white href="/chinh-sach-mua-hang-online/" title="Chính sách mua hàng Online">Chính sách mua hàng Online</a></li>
-					<li><a class="text-white href="/mua-hang-tra-gop" title="Mua hàng trả góp">Mua hàng trả góp</a></li>
-					<li><a class="text-white href="/chinh-sach-bao-mat-thong-tin-khach-hang/" title="Mua hàng trả góp">Chính sách bảo mật thông tin khách hàng</a></li>
-					<li><a class="text-white href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=16826" target="_blank"><img src="https://uqoojcos5nobj.vcdn.cloud/dathongbao.png" style="width:130px;height:auto;" alt="Đã thông báo với Bộ Công Thương"></a></li>
+                    <li><a class="text-white" >Chính sách bảo hành</a></li>
+					<li><a class="text-white">Chính sách bảo hành iPhone - iPad</a></li>
+                    <li><a class="text-white">Bảo hành Xiaomi chính hãng</a></li>
+					<li><a class="text-white">Chính sách mua hàng Online</a></li>
+					<li><a class="text-white">Mua hàng trả góp</a></li>
+					<li><a class="text-white">Chính sách bảo mật thông tin khách hàng</a></li>
+					<li><a class="text-white"><img src="https://uqoojcos5nobj.vcdn.cloud/dathongbao.png" style="width:130px;height:auto;" alt="Đã thông báo với Bộ Công Thương"></a></li>
 				</ul>
                 </div>
       
@@ -692,10 +603,10 @@
                 <div class="col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN LIÊN LẠC</h6>
                   <ul class="menu menu--vertical">
-					<li><a class="text-white href="#" title="Hotline">Hotline bán hàng:<br></a><a class="text-white" href="tel:0966062468">0966.06.2468<br><a class="text-white" href="tel:1900633471">1900.633.471</a></li>
-                    <li><a class="text-white href="tel:1900633471" title="Hotline">Hotline bảo hành, kỹ thuật: 1900.633.471</a></li>
-                    <li><a class="text-white href="tel:0962824422" title="Hotline">Hotline hỗ trợ phần mềm: 096.282.4422</a></li>
-					<li><a class="text-white href="tel:1900633471" title="Hotline">Hotline phản ánh chất lượng dịch vụ:1900.633.471</a></li>
+					<li><a class="text-white">Hotline bán hàng:<br></a><a class="text-white" href="tel:0966062468">0966.06.2468<br><a class="text-white" href="tel:1900633471">1900.633.471</a></li>
+                    <li><a class="text-white">Hotline bảo hành, kỹ thuật: 1900.633.471</a></li>
+                    <li><a class="text-white">Hotline hỗ trợ phần mềm: 096.282.4422</a></li>
+					<li><a class="text-white">Hotline phản ánh chất lượng dịch vụ:1900.633.471</a></li>
 				</ul>
                 </div>
       
@@ -703,12 +614,12 @@
                 <div class="col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN BẮC</h6>
                   <ul class="menu menu--vertical">
-                    <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
-					<li class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</li>
-                    <li class="text-white">118 Thái hà, Đống Đa, Hà Nội</li>
-					<li class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</li>
-					<li class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</li>
-					<li class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</li>
+                    <li><a class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</a></li>
+					<li><a class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</a></li>
+                    <li><a class="text-white">118 Thái hà, Đống Đa, Hà Nội</a></li>
+					<li><a class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</a></li>
+					<li><a class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</a></li>
+					<li><a class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</a></li>
                   </ul> 
                 </div>
       
@@ -716,12 +627,12 @@
                 <div class="col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN NAM</h6>
                   <ul class="menu menu--vertical">
-                    <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
-					<li class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</li>
-                    <li class="text-white">118 Thái hà, Đống Đa, Hà Nội</li>
-					<li class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</li>
-					<li class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</li>
-					<li class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</li>
+                    <li><a class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</a></li>
+					<li><a class="text-white">446 Xã Đàn, Đống Đa, Hà Nội</a></li>
+                    <li><a class="text-white">118 Thái hà, Đống Đa, Hà Nội</a></li>
+					<li><a class="text-white">312 Nguyễn Trãi, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội</a></li>
+					<li><a class="text-white">418 Lạch Tray, Ngô Quyền, Hải Phòng</a></li>
+					<li><a class="text-white">380 Trần Phú, Ba Đình, TP.Thanh Hóa</a></li>
                   </ul> 
                 </div>
               </div>

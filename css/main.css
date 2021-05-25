@@ -245,7 +245,9 @@ body {
   color: #d70018;
   text-transform: uppercase;
   font-weight: 600;
-  display: block; }
+  display: block;
+  margin: 0;
+  padding: 0; }
 
 /*-------------------------*/
 /* 3.2. Breadcrumb
