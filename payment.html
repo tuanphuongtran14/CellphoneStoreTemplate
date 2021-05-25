@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Thanh toán</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Css Stylesheet --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1850241b68.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./vendors/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+    
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Specific Style -->
+    <style>
+      body{
+        background-color: #F8F9FA;
+      }
+      /* =============================== */
+      .footer{
+        border-top: 1px solid black;    
+      }
+
+      .footer__social{
+        /* width:100%; */
+        padding: 0 20px;
+        /* border-radius:10px; */
+      }
+
+      .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+        width: 125px; 
+        background-color: #d62d20!important;
+        /* height: 1px; */
+      }
+
+      footer .footer__hr{
+        background-color: #d62d20; 
+        width: 80%;
+        /* height: 10px;  */
+        margin: 10px 10%;
+      }
+
+      .footer__bottom{
+        justify-content: space-between
+      }
+
+      .footer__bottom-sub{
+        padding-left: 0!important;
+      }
+
+      .footer__bottom-social{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+
+      .footer__bottom-copyright{
+        justify-content: flex-end;
+        align-items: center;
+        padding-right:0!important;
+      }
+
+      @media(max-width : 576px){
+        .payment{
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        .payment__bill, .payment__product{
+          max-width: 100%;
+          margin-bottom: 50px;
+        }
+        .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+            width: 80%;
+        }
+
+        .footer__bottom{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer__bottom-sub,
+        .footer__bottom-social,
+        .footer__bottom-copyright{
+            width: 100%;
+        }
+
+        .footer__bottom-social{
+            display: none!important;
+        }
+
+        .footer__bottom-sub {
+            text-align: center!important;
+        }
+
+        .footer__bottom-copyright{
+            justify-content: center!important;
+        }
+      }
+
+      @media (min-width : 576px) and (max-width : 990px){
+        .payment{
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        .payment__bill, .payment__product{
+          max-width: 100%;
+          margin-bottom: 50px;
+        }
+      }
+
+      @media (min-width : 576px) and (max-width: 974px){
+        .footer__menu-top{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .footer__menu-col1,
+        .footer__menu-col2,
+        .footer__menu-col3,
+        .footer__menu-col4,
+        .footer__menu-col5{
+            max-width: 100%!important;
+        }
+
+        .col1__hr, .col2__hr, .col3__hr, .col4__hr, .col5__hr{
+            width: 80%;
+        }
+
+        .footer__bottom-copyright{
+            justify-content: center!important;
+        }
+
+      }
+
+      /* The progress container (grey background) */
+      .progress-container {
+        width: 100%;
+        height: 3px;
+        background: #ccc;
+      }
+
+      /* The progress bar (scroll indicator) */
+      .progress-bar {
+        height: 3px ;
+        background: #038744!important;
+      }
+    </style>
+  </head>
+<!-- ------------------------------------------------------------------------------------------------- -->
+    
+  <body>
+    <div class="header__navbar sticky-top">
+      <nav class="navbar--custom container px-0">
+          <div class="navbar__logo">
+              <a class="text-white ml-3 mr-4 bars-btn" id="bars-btn">
+                  <i class="fa fa-bars fa--md" aria-hidden="true"></i>
+              </a>
+              <a href="/"><img src="./img/logo.png" class="logo" alt=""></a>
+          </div>
+          <div class="navbar__menu" id="navbar-menu">
+              <ul class="menu menu--nav" id="menu--nav">
+                  <li class="menu__item">
+                      <a href="http://uitstyle.xyz" class="text-white">Trang chủ</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Sản phẩm</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Về chúng tôi</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Tin tức</a>
+                  </li>
+                  <li class="menu__item">
+                      <a href="" class="text-white">Liên hệ</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="navbar__others">
+              <ul class="menu menu--horizontal">
+                  <li class="menu__item">
+                      <a class="text-white" id="search-btn">
+                          <i class="fa fa-search fa--md" aria-hidden="true"></i>
+                      </a>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-heart fa--md" aria-hidden="true" data-amount="0"></i>
+                      </a>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-shopping-bag fa--md" data-amount="0" aria-hidden="true"></i>
+                      </a>
+                  </li>
+                  </li>
+                  <li class="menu__item">
+                      <a class="text-white">
+                          <i class="fa fa-user fa--md" aria-hidden="true"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  
+      <!-- SCROLL INDICATOR -->
+      <div class="progress-container w-100 mt-3 mx-0">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+    
+    
+    <!-- HEADER END -->
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- BODY -->
+    
+    <nav class="breadcrumb breadcrumb--custom my-1">
+      <div class="container px-0">
+          <a class="breadcrumb-item" href="#">Trang chủ</a>
+          <a class="breadcrumb-item" href="#">Apple</a>
+          <span class="breadcrumb-item active">Apple iPhone 12 Pro 128GB Chính hãng VN/A</span>
+      </div>
+    </nav>
+    <div class="container mt-3 mb-5">
+      <div class="payment row">
+        <div class="payment__bill col-6 bg-white shadow py-3 mr-5" style="border-radius: 25px">
+
+          <div class="form-group ">
+            <i class=""><b><h2>Thông tin giao hàng</h2></b></i>
+            <div class="formItem py-3">
+              <label for="">Họ và tên</label>
+              <input type="text" class="form-control" name="" placeholder="">
+            </div>
+            <div class="formItem py-3">
+              <label for="">Số điện thoại</label>
+              <input type="text" class="form-control" name="" placeholder="">
+            </div>
+            <div class="formItem py-3">
+              <label for="">Email</label>
+              <input type="text" class="form-control" name="" placeholder="">
+              <small>We'll never share your email with anyone else.</small>
+            </div> 
+            <div class="formItem py-3"> 
+              <label for="">Địa chỉ</label>
+              <select class="form-control my-2" name="" id="">
+                <option>Chọn tỉnh / thành phố</option>
+                <option>Thành phố Hồ Chí Minh</option>
+                <option>Hà Nội</option>
+              </select> 
+              <select class="form-control my-2" name="" id="">
+                <option>Chọn quận huyện</option>
+                <option>Thành phố Hồ Chí Minh</option>
+                <option>Hà Nội</option>
+              </select> 
+              <input type="text" class="form-control my-2" name="" placeholder="Địa chỉ chi tiết">
+            </div> 
+          </div>
+
+          <div class="form-group w-100">
+            <b><h2 class="">Phương thức thanh toán</h2></b>
+            <div class="row my-3">
+              <div class="col-6">
+                <div class="card text-dark">
+                  <div class="card-body">
+                    <input type="radio" name="phuongThuc" id="" value="">
+                    <span>Giao hàng miễn phí tận nơi</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card text-dark">
+                  <div class="card-body">
+                    <input type="radio" name="phuongThuc" id="">
+                    <span>Giao hàng nhanh, giá rẻ</span>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div> 
+
+          <button type="button" class="btn btn-primary w-100 my-3">Đặt hàng</button>
+          
+        </div>
+
+        <div class="payment__product col-5 bg-white shadow py-3 w-100 h-50"  style="border-radius: 25px">
+          <div class="form-group w-100">
+            <i class=""><b><h2>Chi tiết đơn hàng</h2></b></i>
+            
+            <div class="card text-white bg-white text-dark my-3" >
+              <div class="row no-gutters" style="height:160px">
+                <div class="col-4">
+                  <img class="" style="width: 160px; height: auto;" src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-200x200.jpg" alt="">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <p class="card-text container">Iphone 10</p>
+                    <p class="card-text container">
+                      Số lượng:
+                      <button class="numberButton">-</button>
+                      <button disabled data-track-content="true" class="numberButton">1</button>
+                      <button class="numberButton">+</button>
+                    </p>
+                    <p class="card-text container">Giá: 10.300.000 VND</p>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <div class="card text-white bg-white text-dark my-3" >
+              <div class="row no-gutters" style="height:160px">
+                <div class="col-4 border-right">
+                  <img class="" style="width: 160px; height: auto;" src="https://cdn.tgdd.vn/Products/Images/42/220522/samsung-galaxy-note-20-ultra-vangdong-600x600-200x200.jpg" alt="">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <p class="card-text container">Samsung Galaxy Note 20</p>
+                    <p class="card-text container">
+                      Số lượng:
+                      <button class="numberButton">-</button>
+                      <button disabled data-track-content="true" class="numberButton">1</button>
+                      <button class="numberButton">+</button>
+                    </p>
+                    <p class="card-text container">Giá: 19.450.000 VND</p>
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+            <div class="d-flex justify-content-around mt-5">
+              <span>Tổng tiền</span>
+              <span>29.750.000 VND</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BODY END -->
+
+
+    <!-- ------------------------------------------------------------------------------------------------- -->
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto bg-white text-dark"> 
+      <div class="footer__menu container text-dark text-left text-md-left pt-5">
+        <div class="footer__menu-top row">
+
+          <!-- COLUMN 1 -->
+          <div class="footer__menu-col1 col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">The Providers</h6>
+            <hr class="col1__hr  d-inline-block mx-auto " >
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat in voluptatum assumenda pariatur ad quae quidem natus non doloremque, eos repellendus accusamus quod molestiae reprehenderit? Quidem consequatur dicta aliquam.</p>
+          </div>
+
+          <!-- COLUMN 2 -->
+          <div class="footer__menu-col2 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">About us</h6>
+            <hr class="col2__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled ">
+              <li class="my-2 "><a href="#" class="text-dark">HTML</a></li>
+              <li class="my-2"><a href="#" class="text-dark">CSS</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Bootstrap</a></li>
+              <li class="my-2"><a href="#" class="text-dark">JavaScript</a></li>
+            </ul> 
+          </div>
+
+          <!-- COLUMN 3 -->
+          <div class="footer__menu-col3 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Customer care</h6>
+            <hr class="col3__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled">
+              <li class="my-2"><a href="#" class="text-dark">Home</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Abouts</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Services</a></li>
+              <li class="my-2"><a href="#" class="text-dark">Contact</a></li>
+            </ul> 
+          </div>
+
+          <!-- COLUMN 4 -->
+          <div class="footer__menu-col4 col-md-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Contact us</h6>
+            <hr class="col4__hr  d-inline-block mx-auto " >
+            <ul class="list-unstyled">
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-home mr-3"></i>Karachi, Street 4</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-envelope mr-3"></i>unlimited@gmail.com</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-phone mr-3"></i>0912245678</a></li>
+              <li class="my-2"><a href="#" class="text-dark text-decoration-none"><i class="fas fa-print mr-3"></i>0987654221</a></li>
+            </ul>
+          </div>
+
+          <!-- COLUMN 5 -->
+          <div class="footer__menu-col5 col-md-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr class="col5__hr d-inline-block mx-auto " >
+            <form class="mb-3 mb-lg-0">
+              <input type="search" name="" id="" class="form-control form-conrol-dark" placeholder="Search ..." style="border-color: black">
+            </form>
+            <div class="d-flex justify-content-between mt-2">
+              <i class="fab fa-cc-paypal fa-3x"></i>
+              <i class="fab fa-cc-amex fa-3x"></i>
+              <i class="fab fa-cc-visa fa-3x"></i>
+              <i class="fab fa-cc-mastercard fa-3x"></i>
+            </div>
+          </div>
+        </div>
+      </div>        
+      
+      <!-- Horizon Rule -->
+      <hr class="footer__hr">
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer__bottom container text-dark d-flex flex-wrap justify-content-between pb-4">
+        <div class="footer__bottom-sub col-lg-4 mr-lg-auto">
+          <p class="w-100 d-block pt-2">Subcribe for more newsletter:</p>
+          <p class="d-block">
+            <form class="mb-3 mb-lg-0 w-70">
+              <input type="search" name="" id="" class="form-control form-conrol-dark" placeholder="Enter your email here ... " style="border-color: black">
+            </form>
+          </p> 
+        </div>
+
+        <div class="footer__bottom-social col-lg-4 py-4 mr-lg-auto">
+          <div class="text-center py-auto" >
+            <a href="#"><i class="fab fa-facebook-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-youtube-square fa-2x text-dark mr-4"></i></a>
+            <a href="#"><i class="fab fa-instagram-square fa-2x text-dark"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__bottom-copyright col-lg-4 py-3 d-flex">
+          <p class="d-block">
+            <a href="#" class="text-dark text-decoration-none">Terms and Conditions </a>&nbsp||&nbsp
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>&nbsp||&nbsp
+            <a href="#" class="text-dark text-decoration-none">Sitemap</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- Optional JavaScript -->
+    
+    <script>
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JS OF SCROLL INDICATOR -->
+  </body>
+</html>
