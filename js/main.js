@@ -1,7 +1,3 @@
-window.onload = function () {
-    toggleMenuAndSearch();
-}
-
 function playSlider() {
     var carousel = new Flickity( '.gallery', {
         autoPlay: 5000
@@ -88,7 +84,6 @@ function getStyleElement(element,styleProp)
 }
 
 function selectByThumbnail() {
-    console.log('Ok');
     var thumbnails = document.getElementsByClassName('thumbnail');
     var flkty = new Flickity('.product-images__slide');
 
@@ -102,6 +97,21 @@ function selectByThumbnail() {
             document.querySelector(".thumbnail.active").classList.remove("active");
             this.classList.add("active");
             flkty.select( i, true, false )
+        }
+    }
+}
+
+function selectVersions(id) {
+    console.log('Start');
+
+    var versions = document.querySelectorAll(`#${id} .version`);
+    console.log(versions);
+
+    for(let i = 0; i < versions.length; i++) {
+        versions[i].onclick = function() {
+            console.log('Run ' + i);
+            document.querySelector(`#${id} .version.active`).classList.remove("active");
+            this.classList.add("active");
         }
     }
 }

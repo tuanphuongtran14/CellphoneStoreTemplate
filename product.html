@@ -124,7 +124,7 @@
                         <span class="regular-price">25,990,000 ₫</span>
                     </div>
                     <p class="my-2"><b>Chọn phiên bản phù hợp</b></p>
-                    <div class="product-details__versions">
+                    <div class="product-details__versions" id="versions">
                         <div class="version active">
                             512G
                             <span class="version__price">38,590,000 ₫</span>
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                     <p class="my-2"><b>Chọn màu phù hợp</b></p>
-                    <div class="product-details__versions">
+                    <div class="product-details__versions" id="colors">
                         <div class="version active">
                             Bạc
                             <span class="version__price">38,590,000 ₫</span>
@@ -277,6 +277,9 @@
     <script>
         window.onload = function () {
             selectByThumbnail();
+            toggleMenuAndSearch();
+            selectVersions('versions');
+            selectVersions('colors');
         }
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
