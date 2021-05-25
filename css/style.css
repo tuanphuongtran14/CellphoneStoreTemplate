@@ -481,6 +481,7 @@ body {
       width: 100%; }
       .product-details .product-details__images .product-images__thumbnails .thumbnail {
         width: 15%;
+        height: auto;
         display: block;
         margin: 0.25rem;
         position: relative;

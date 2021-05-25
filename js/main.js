@@ -1,7 +1,7 @@
 window.onload = function () {
     toggleMenuAndSearch();
     playSlider();
-    
+    selectByThumbnail();
 }
 
 function playSlider() {
@@ -87,4 +87,17 @@ function getStyleElement(element,styleProp)
     else if (window.getComputedStyle)
         var y = document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProp);
     return y;
+}
+
+function selectByThumbnail() {
+    var thumbnails = document.getElementsByClassName('thumbnail');
+    var flkty = new Flickity('.product-images__slide');
+
+    for(let i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].onclick = function() {
+            document.querySelector(".thumbnail.active").classList.remove("active");
+            this.classList.add("active");
+            flkty.select( i, true, false )
+        }
+    }
 }
