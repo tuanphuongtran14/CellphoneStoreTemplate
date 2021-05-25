@@ -459,7 +459,7 @@ body {
         width: 100%; }
         @media only screen and (min-width: 1200px) {
           .product-details .product-details__images .product-images__slide .product-image {
-            width: 83%; } }
+            width: 85%; } }
       .product-details .product-details__images .product-images__slide .flickity-prev-next-button {
         width: 30px;
         height: 30px;
