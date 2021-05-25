@@ -705,7 +705,7 @@ counter-increment: gallery-cell;
         }
 
         .product-images__thumbnails {
-            // height: 2rem;
+            max-height: 4rem;
             display: flex;
             justify-content: space-between;
 

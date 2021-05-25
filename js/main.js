@@ -1,14 +1,12 @@
 window.onload = function () {
     toggleMenuAndSearch();
-    playSlider();
-    selectByThumbnail();
 }
 
 function playSlider() {
-    var flkty = new Flickity( '.gallery', {
+    var carousel = new Flickity( '.gallery', {
         autoPlay: 5000
     });
-    flkty.playPlayer();
+    carousel.playPlayer();
 }
 
 function toggleMenuAndSearch() {
@@ -90,6 +88,7 @@ function getStyleElement(element,styleProp)
 }
 
 function selectByThumbnail() {
+    console.log('Ok');
     var thumbnails = document.getElementsByClassName('thumbnail');
     var flkty = new Flickity('.product-images__slide');
 

@@ -476,6 +476,7 @@ body {
       .product-details .product-details__images .product-images__slide .flickity-prev-next-button.next {
         right: -5px; }
     .product-details .product-details__images .product-images__thumbnails {
+      max-height: 4rem;
       display: flex;
       justify-content: space-between;
       width: 100%; }
