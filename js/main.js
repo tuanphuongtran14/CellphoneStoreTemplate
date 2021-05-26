@@ -56,8 +56,8 @@ function toggleMenuAndSearch() {
     // If bars button is clicked, open menu on left
     document.getElementById("bars-btn").onclick = function () {
         overBodyLayer.style.display = "block";
-        root.style.transform = "translateX(60vw)";
         menu.style.transform = "translateX(60vw)";
+        root.style.transform = "translateX(60vw)";
     }
 
     // If search button is clicked, display search bar

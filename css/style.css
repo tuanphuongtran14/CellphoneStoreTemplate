@@ -129,8 +129,8 @@ body {
         background-color: #b60015; }
       .menu.menu--nav .menu__item a {
         text-decoration: none;
-        height: 3.5rem;
-        line-height: 3.5rem;
+        height: 4rem;
+        line-height: 4rem;
         display: inline-block; }
     @media only screen and (max-width: 991px) {
       .menu.menu--nav {
@@ -163,7 +163,8 @@ body {
   .menu.menu--vertical {
     list-style: none; }
     .menu.menu--vertical li {
-      margin-bottom: 0.75rem; }
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem; }
     .menu.menu--vertical a {
       text-decoration: none;
       font-size: 0.9rem; }
@@ -171,6 +172,9 @@ body {
 /*-------------------------*/
 /* 2.6. Fontawesome CSS
 /*-------------------------*/
+.fa.fa--sm {
+  font-size: 120%; }
+
 .fa.fa--md {
   font-size: 150%; }
   .fa.fa--md.fa-user {
@@ -195,9 +199,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3.5rem; }
+  height: 4rem; }
   .navbar--custom .navbar__menu {
-    height: 3.5rem;
+    height: 4rem;
     display: flex;
     align-items: center; }
 
@@ -270,7 +274,7 @@ body {
 /*-------------------------*/
 .search-bar {
   width: 100%;
-  height: 3.5rem;
+  height: 4rem;
   background-color: #d70018;
   display: none;
   justify-content: center;
@@ -763,3 +767,44 @@ ul.product-details__bonus {
 .pagination.pagination--custom .page-item.disabled .page-link {
   color: #888;
   cursor: not-allowed !important; }
+
+/*=================================================================================*/
+/* 9. Payment Page Section
+/*=================================================================================*/
+.payment {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap; }
+  @media (min-width: 991px) {
+    .payment {
+      flex-direction: row; } }
+  .payment .payment__bill {
+    padding: 0;
+    margin-bottom: 20px; }
+    @media (min-width: 991px) {
+      .payment .payment__bill {
+        margin-bottom: 0;
+        padding-right: 20px !important; } }
+  .payment .payment__product {
+    padding: 0;
+    margin-bottom: 20px; }
+    @media (min-width: 991px) {
+      .payment .payment__product {
+        margin-bottom: 0; } }
+    .payment .payment__product .payment__quantity {
+      display: flex;
+      align-items: center; }
+      .payment .payment__product .payment__quantity .quantity__input {
+        width: 3rem;
+        height: 2rem;
+        text-align: center;
+        background-color: #FCFCFC;
+        border: 1px solid #ddd; }
+    .payment .payment__product .total-price, .payment .payment__product .item-price {
+      font-weight: 600;
+      color: #d70018; }
+    .payment .payment__product .total-price {
+      font-size: 1.1rem; }
+    .payment .payment__product .item-thumbnail {
+      display: flex;
+      align-items: center; }
