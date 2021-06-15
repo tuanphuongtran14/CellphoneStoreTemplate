@@ -156,9 +156,9 @@
                                         <span class="card-text font-weight-bold">Apple iPhone 12 Pro 128GB Chính hãng VN/A0</span>
                                         <div class="card-text my-2 payment__quantity">
                                             Số lượng:
-                                                <input type="text" class="ml-2 quantity__input" value="1" />
+                                                <input type="number" class="ml-2 quantity__input"  id="soluong" value="0" min="0" />
                                         </div>
-                                        Đơn giá:<span class="card-text item-price"> 8.990.000₫</span>
+                                        Đơn giá:<span class="card-text item-price" id="giatien"> 0₫</span>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
                                         <span class="card-text font-weight-bold">Apple iPhone 11 Pro MAX 64GB cũ 99%</span>
                                         <div class="card-text my-2 payment__quantity">
                                             Số lượng:
-                                                <input type="text" class="ml-2 quantity__input" value="1" />
+                                                <input type="number" class="ml-2 quantity__input" value="1" />
                                         </div>
                                         Đơn giá:<span class="card-text item-price"> 8.990.000₫</span>
                                     </div>
@@ -264,6 +264,7 @@
     </form>
     <div id="overlaybody"></div>
     <!-- Optional JavaScript -->
+    <script src="./js/payment.js"></script>
     <script src="./vendors/flickity.pkgd.min.js"></script>
     <script src="./js/main.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
