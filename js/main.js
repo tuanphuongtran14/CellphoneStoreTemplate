@@ -28,6 +28,9 @@ function toggleMenuAndSearch() {
     
     let searchBar = document.getElementById("search-bar");
     let searchBtn = document.getElementById("search-btn");
+    let searchIcon = document.getElementById("search-icon");
+    let searchGo = document.getElementById("search-go")
+    let searchAdvanced = document.getElementById("search-advanced")
 
     let overBodyLayer = document.getElementById("overlaybody");
 
@@ -64,8 +67,16 @@ function toggleMenuAndSearch() {
     searchBtn.onclick = function () {
         searchBar.style.display = "flex";
         overBodyLayer.style.display = "block";
+        searchIcon.style.display = "block";
+        searchGo.style.display = "none"
+        searchAdvanced.style.display = "none";
     }
 
+    searchBar.onclick = function () {
+        searchGo.style.display = "block"
+        searchAdvanced.style.display = "block";
+        searchIcon.style.display = "none";
+    }
 
     // If over body layer is click, close menu or search bar
     overBodyLayer.onclick = function () {
