@@ -76,7 +76,7 @@ function updateCoreInput(val) {
   coreInput = document.getElementById('coreInput');
   for (let i = 0; i <= coreRange.max; i++) {
     if (i == coreRange.value)
-      coreInput.innerHTML="CPU core: " + list[i]; 
+      coreInput.innerHTML="CPU cores: " + list[i]; 
   } 
 }
 

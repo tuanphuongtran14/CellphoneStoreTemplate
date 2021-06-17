@@ -1,0 +1,20 @@
+
+    @media only screen and (max-width: 991px) {
+        .body__advanced-box{
+            display: block;
+            }
+            .box__item{
+                /* width: 100%; */
+                max-width: 100%;
+                padding: 0 !important;
+                }
+                .box__item-mat1{
+                    flex: none;
+                    max-width: 55% !important;
+                }
+                .box__item-mat2{
+                    flex: none;
+                    max-width: 45% !important;
+                }
+    }
+    

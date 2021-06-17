@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./vendors/flickity.min.css">
     <!-- Optional CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/advanced.css">
 </head>
 
 <body id="body">
@@ -72,7 +73,7 @@
         </div>
         <div class="container px-0 banner">
             <div class="carousel row mx-0">
-                <div class="col-12 col-lg-8 px-0">
+                <div class="box__item col-12 col-lg-8 px-0">
                     <div class="gallery js-flickity " data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
                         <img class="gallery-cell" src="./img/banner/ROG_Phone_Sliding_desk.webp" alt="">
                         <img class="gallery-cell" src="./img/banner/690x300_Buds_.webp" alt="">
@@ -81,14 +82,14 @@
                     </div>
                 </div>
                 <div class="sub-banner col-12 col-lg-4 px-0">
-                    <div class="col-12 mb-2 pr-0">
+                    <div class="box__item col-12 mb-2 pr-0">
                         <img src="./img/banner/iPhone_12_690x300_copy_3_.webp" alt="">
                     </div>
-                    <div class="col-12 pr-0">
+                    <div class="box__item col-12 pr-0">
                         <img src="./img//banner/Right_banner.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-12 bottom-banner px-0 mt-2">
+                <div class="box__item col-12 bottom-banner px-0 mt-2">
                     <img src="./img/banner/bottom-banner.png" alt="">
                 </div>
             </div>
@@ -98,8 +99,8 @@
         <div class="body_advanced container p-5" style=" background-color: #FFFFFF;">
         <!-- ================================ FILTER GENERAL =============================== --> 
             <h3>General</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group">
                         <!-- <label for=""></label> -->
                         <select class="form-control" name="" id="">
@@ -109,13 +110,13 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex"> 
-                        <label for="" id="yearInput" class="col-4">Year: &nbsp;</label>
-                        <input class="col-8" type="range" min="2010" max="2021" step="1" style="width: 100%;" onchange="updateYearInput(this.value);">
+                        <label for="" id="yearInput" class="col-4 pl-1 box__item-mat1">Year: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" type="range" min="2010" max="2021" step="1" style="width: 100%;" onchange="updateYearInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group">
                         <!-- <label for=""></label> -->
                         <select class="form-control" name="" id="">
@@ -127,18 +128,18 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="priceInput" class="col-4">Price: &nbsp;</label>
-                        <input class="col-8" id="priceRange" type="range" min="0" max="5" step="1" style="width: 100%;" onchange="updatePriceInput(this.value);">
+                        <label for="" id="priceInput" class="col-4 pl-1 box__item-mat1">Price: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="priceRange" type="range" min="0" max="5" step="1" style="width: 100%;" onchange="updatePriceInput(this.value);">
                     </div>
                 </div> 
             </div>
 
             <!-- ================================ FILTER NETWORK =============================== --> 
             <h3>Network</h3>
-            <div class="row no-gutters">  
-                <div class="col-3 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>2G</option>
@@ -149,7 +150,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>3G</option>
@@ -161,7 +162,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>4G</option>
@@ -172,7 +173,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-3 pl-2">
+                <div class="box__item col-3 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>5G</option>
@@ -187,8 +188,8 @@
 
             <!-- ================================ FILTER SIM =============================== --> 
             <h3>SIM</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Size</option>
@@ -199,7 +200,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Multiple</option>
@@ -213,8 +214,8 @@
 
             <!-- ================================ FILTER BODY =============================== --> 
             <h3>Body</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Form actor</option>
@@ -228,7 +229,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Keyboard</option>
@@ -237,31 +238,31 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="heightInput" class="col-4 pl-1 pl-1">Height: &nbsp;</label>
-                        <input class="col-8" id="heightRange" type="range" min="0" max="9" step="1" style="width: 100%;" onchange="updateHeightInput(this.value);">
+                        <label for="" id="heightInput" class="col-4 pl-1 box__item-mat1">Height: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="heightRange" type="range" min="0" max="9" step="1" style="width: 100%;" onchange="updateHeightInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="widthInput" class="col-4 pl-1">Width: &nbsp;</label>
-                        <input class="col-8" id="widthRange" type="range" min="0" max="7" step="1" style="width: 100%;" onchange="updateWidthInput(this.value);">
+                        <label for="" id="widthInput" class="col-4 pl-1 box__item-mat1">Width: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="widthRange" type="range" min="0" max="7" step="1" style="width: 100%;" onchange="updateWidthInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="thicknessInput" class="col-4 pl-1">Thickness &nbsp;</label>
-                        <input class="col-8" id="thicknessRange" type="range" min="0" max="15" step="1" style="width: 100%;" onchange="updateThicknessInput(this.value);">
+                        <label for="" id="thicknessInput" class="col-4 pl-1 box__item-mat1">Thickness &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="thicknessRange" type="range" min="0" max="15" step="1" style="width: 100%;" onchange="updateThicknessInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="weightInput" class="col-4 pl-1">Weight: &nbsp;</label>
-                        <input class="col-8" id="weightRange" type="range" min="0" max="17" step="1" style="width: 100%;" onchange="updateWeightInput(this.value);">
+                        <label for="" id="weightInput" class="col-4 pl-1 box__item-mat1">Weight: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="weightRange" type="range" min="0" max="17" step="1" style="width: 100%;" onchange="updateWeightInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>IP Certificate:</option>
@@ -273,12 +274,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <input class="form-control" type="text" placeholder="Color: ">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Back Marterial</option>
@@ -288,7 +289,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Plastic</option>
@@ -301,8 +302,8 @@
 
             <!-- ================================ FILTER PLATFORM =============================== --> 
             <h3>Plaform</h3>
-            <div class="row no-gutters">  
-                <div class="col-12">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-12">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>OS</option>
@@ -317,19 +318,19 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="freqInput" class="col-4 pl-1">CPU freq: &nbsp;</label>
-                        <input class="col-8" id="freqRange" type="range" min="0" max="18" step="1" style="width: 100%;" onchange="updateFreqInput(this.value);">
+                        <label for="" id="freqInput" class="col-4 pl-1 box__item-mat1">CPU freq: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="freqRange" type="range" min="0" max="18" step="1" style="width: 100%;" onchange="updateFreqInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="coreInput" class="col-4 pl-1">CPU CORES: &nbsp;</label>
-                        <input class="col-8" id="coreRange" type="range" min="0" max="4" step="1" style="width: 100%;" onchange="updateCoreInput(this.value);">
+                        <label for="" id="coreInput" class="col-4 pl-1 box__item-mat1">CPU cores: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="coreRange" type="range" min="0" max="4" step="1" style="width: 100%;" onchange="updateCoreInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option value="">Chipset</option>
@@ -347,20 +348,20 @@
             
             <!-- ================================ FILTER MEMORY =============================== --> 
             <h3>Memory</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="ramInput" class="col-4 pl-1">Ram: &nbsp;</label>
-                        <input class="col-8" id="ramRange" type="range" min="0" max="7" step="1" style="width: 100%;" onchange="updateRamInput(this.value);">
+                        <label for="" id="ramInput" class="col-4 pl-1 box__item-mat1">Ram: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="ramRange" type="range" min="0" max="7" step="1" style="width: 100%;" onchange="updateRamInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="storageInput" class="col-4 pl-1">Storage: &nbsp;</label>
-                        <input class="col-8" id="storageRange" type="range" min="0" max="13" step="1" style="width: 100%;" onchange="updateStorageInput(this.value);">
+                        <label for="" id="storageInput" class="col-4 pl-1 box__item-mat1">Storage: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="storageRange" type="range" min="0" max="13" step="1" style="width: 100%;" onchange="updateStorageInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Card slot:</option>
@@ -374,26 +375,26 @@
 
             <!-- ================================ FILTER DISPLAY =============================== --> 
             <h3>DISPLAY</h3>
-            <div class="row no-gutters">  
-                <div class="col-12">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-12">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="dResolutionInput" class="col-4 pl-1">Resolution: &nbsp;</label>
-                        <input class="col-8" id="dResolutionRange" type="range" min="0" max="8" step="1" style="width: 100%;" onchange="updateDResolutionInput(this.value);">
+                        <label for="" id="dResolutionInput" class="col-4 pl-1 box__item-mat1">Resolution: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="dResolutionRange" type="range" min="0" max="8" step="1" style="width: 100%;" onchange="updateDResolutionInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="sizeInput" class="col-4 pl-1">Size: &nbsp;</label>
-                        <input class="col-8" id="sizeRange" type="range" min="0" max="41" step="1" style="width: 100%;" onchange="updateSizeInput(this.value);">
+                        <label for="" id="sizeInput" class="col-4 pl-1 box__item-mat1">Size: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="sizeRange" type="range" min="0" max="41" step="1" style="width: 100%;" onchange="updateSizeInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="densityInput" class="col-4 pl-1">Density: &nbsp;</label>
-                        <input class="col-8" id="densityRange" type="range" min="0" max="45" step="1" style="width: 100%;" onchange="updateDensityInput(this.value);">
+                        <label for="" id="densityInput" class="col-4 pl-1 box__item-mat1">Density: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="densityRange" type="range" min="0" max="45" step="1" style="width: 100%;" onchange="updateDensityInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Technology:</option>
@@ -402,7 +403,7 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Notch:</option>
@@ -412,7 +413,7 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                           <label class="form-check-label">
@@ -426,14 +427,14 @@
 
             <!-- ================================ FILTER MAIN CAMERA =============================== --> 
             <h3>Main camera</h3>
-            <div class="row no-gutters"> 
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters"> 
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="mCamResolutionInput" class="col-4 pl-1">Resolution: &nbsp;</label> 
-                        <input class="col-8" id="mCamResolutionRange" type="range" min="0" max="12" step="1" style="width: 100%;" onchange="updateMCamResolutionInput(this.value);">
+                        <label for="" id="mCamResolutionInput" class="col-4 pl-1 box__item-mat1">Resolution: &nbsp;</label> 
+                        <input class="col-8 px-0 box__item-mat2" id="mCamResolutionRange" type="range" min="0" max="12" step="1" style="width: 100%;" onchange="updateMCamResolutionInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>CAMERAS:</option>
@@ -444,7 +445,7 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-3 pl-2">
+                <div class="box__item -3 pl-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -454,13 +455,13 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="fNumInput" class="col-4 pl-1">F-Number: &nbsp;</label>
-                        <input class="col-8" id="fNumRange" type="range" min="0" max="12" step="1" style="width: 100%;" onchange="updateFNumInput(this.value);">
+                        <label for="" id="fNumInput" class="col-4 pl-1 box__item-mat1">F-Number: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="fNumRange" type="range" min="0" max="12" step="1" style="width: 100%;" onchange="updateFNumInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item -3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -470,7 +471,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 pl-2">
+                <div class="box__item col-3 pl-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -480,13 +481,13 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-6 pr-2">
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="videoInput" class="col-4 pl-1">Video: &nbsp;</label>
-                        <input class="col-8" id="videoRange" type="range" min="0" max="5" step="1" style="width: 100%;" onchange="updateVideoInput(this.value);">
+                        <label for="" id="videoInput" class="col-4 pl-1 box__item-mat1">Video: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="videoRange" type="range" min="0" max="5" step="1" style="width: 100%;" onchange="updateVideoInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>FLASH:</option>
@@ -500,14 +501,14 @@
 
             <!-- ================================ FILTER SELFIE CAMERA =============================== --> 
             <h3>Selfie camera</h3>
-            <div class="row no-gutters"> 
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters"> 
+                <div class="box__item col-6 pr-2">
                     <div class="form-group form-control d-flex">
-                        <label for="" id="sCamResolutionInput" class="col-4 pl-1">Resolution: &nbsp;</label> 
-                        <input class="col-8" id="sCamResolutionRange" type="range" min="0" max="8" step="1" style="width: 100%;" onchange="updateSCamResolutionInput(this.value);">
+                        <label for="" id="sCamResolutionInput" class="col-4 pl-1 box__item-mat1">Resolution: &nbsp;</label> 
+                        <input class="col-8 px-0 box__item-mat2" id="sCamResolutionRange" type="range" min="0" max="8" step="1" style="width: 100%;" onchange="updateSCamResolutionInput(this.value);">
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -517,7 +518,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 pl-2">
+                <div class="box__item col-3 pl-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -527,7 +528,7 @@
                         </div> 
                     </div>
                 </div>  
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -537,7 +538,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -551,8 +552,8 @@
 
             <!-- ================================ FILTER AUDIO =============================== --> 
             <h3>Audio</h3>
-            <div class="row no-gutters">  
-                <div class="col-3 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -562,7 +563,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -576,8 +577,8 @@
 
             <!-- ================================ FILTER SENSORS =============================== --> 
             <h3>Sensors</h3>
-            <div class="row no-gutters">  
-                <div class="col-3 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -587,7 +588,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -597,7 +598,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -607,7 +608,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 pl-2">
+                <div class="box__item col-3 pl-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -617,7 +618,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -627,7 +628,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -637,10 +638,10 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
-                            <option>FINGERPRINT:</option>
+                            <option>Fingerprint:</option>
                             <option value="">Yes (Any type)</option>
                             <option value="">Front-mounted</option>
                             <option value="">Rear-mounted</option>
@@ -653,8 +654,8 @@
 
             <!-- ================================ FILTER CONNECTIVITY =============================== --> 
             <h3>Sensors</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>WLAN(WI-FI):</option>
@@ -664,7 +665,7 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Bluetooth:</option>
@@ -676,7 +677,7 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -686,7 +687,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -696,7 +697,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -706,7 +707,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-3 pl-2">
+                <div class="box__item col-3 pl-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -716,7 +717,7 @@
                         </div>
                     </div>
                 </div> 
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -730,14 +731,14 @@
 
             <!-- ================================ FILTER BATTERY =============================== --> 
             <h3>Battery</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
-                    <div class="form-group form-control d-flex">
-                        <label for="" id="capacityInput" class="col-4 pl-1">Capacity: &nbsp;</label>
-                        <input class="col-8" id="capacityRange" type="range" min="0" max="20" step="1" style="width: 100%;" onchange="updateCapacityInput(this.value);">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
+                    <div class="form-group form-control d-flex justify-content-between"">
+                        <label for="" id="capacityInput" class="col-4 pl-1 box__item-mat1">Capacity: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="capacityRange" type="range" min="0" max="20" step="1" onchange="updateCapacityInput(this.value);">
                     </div>
                 </div>
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Removable:</option>
@@ -745,13 +746,13 @@
                         </select>
                     </div>
                 </div> 
-                <div class="col-9 pr-2">
-                    <div class="form-group form-control d-flex">
-                        <label for="" id="chargeSpeedInput" class="col-4 pl-1">Charging speed: &nbsp;</label>
-                        <input class="col-8" id="chargeSpeedRange" type="range" min="0" max="18" step="1" style="width: 100%;" onchange="updateChargeSpeedInput(this.value);">
+                <div class="box__item col-9 pr-2">
+                    <div class="form-group form-control d-flex justify-content-between">
+                        <label for="" id="chargeSpeedInput" class="col-4 pl-1 box__item-mat1">Charging speed: &nbsp;</label>
+                        <input class="col-8 px-0 box__item-mat2" id="chargeSpeedRange" type="range" min="0" max="18" step="1" onchange="updateChargeSpeedInput(this.value);">
                     </div>
                 </div>
-                <div class="col-3 px-2">
+                <div class="box__item col-3 px-2">
                     <div class="form-check form-control position-relative">
                         <label class="form-check-label">
                             Wireless charging:
@@ -763,13 +764,13 @@
             
             <!-- ================================ FILTER MISC =============================== --> 
             <h3>Misc</h3>
-            <div class="row no-gutters">  
-                <div class="col-6 pr-2">
+            <div class="body__advanced-box row no-gutters">  
+                <div class="box__item col-6 pr-2">
                     <div class="form-group"> 
                         <input class="form-control" type="text" placeholder="Free text: ">
                     </div>
                 </div> 
-                <div class="col-6 pl-2">
+                <div class="box__item col-6 pl-2">
                     <div class="form-group"> 
                         <select class="form-control" name="" id="">
                             <option>Order:</option>
@@ -781,7 +782,7 @@
                         </select>
                     </div>
                 </div>  
-                <div class="col-3 pr-2">
+                <div class="box__item col-3 pr-2">
                     <div class="form-group"> 
                         <div class="form-check form-control position-relative">
                             <label class="form-check-label">
@@ -818,7 +819,7 @@
             <div class="container text-white text-left text-md-left pt-5">
               <div class="row">
                 <!-- COLUMN 1 -->
-                <div class="col-md-3 mx-auto mb-4 px-3">
+                <div class="box__item col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN HỖ TRỢ</h6>
                   <ul class="menu menu--vertical">
                     <li><a class="text-white href="" >Chính sách bảo hành</a></li>
@@ -832,7 +833,7 @@
                 </div>
       
                 <!-- COLUMN 2 -->
-                <div class="col-md-3 mx-auto mb-4 px-3">
+                <div class="box__item col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">THÔNG TIN LIÊN LẠC</h6>
                   <ul class="menu menu--vertical">
 					<li><a class="text-white href="#" title="Hotline">Hotline bán hàng:<br></a><a class="text-white" href="tel:0966062468">0966.06.2468<br><a class="text-white" href="tel:1900633471">1900.633.471</a></li>
@@ -843,7 +844,7 @@
                 </div>
       
                 <!-- COLUMN 3 -->
-                <div class="col-md-3 mx-auto mb-4 px-3">
+                <div class="box__item col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN BẮC</h6>
                   <ul class="menu menu--vertical">
                     <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
@@ -856,7 +857,7 @@
                 </div>
       
                 <!-- COLUMN 4 -->
-                <div class="col-md-3 mx-auto mb-4 px-3">
+                <div class="box__item col-md-3 mx-auto mb-4 px-3">
                   <h6 class="footer__title text-uppercase font-weight-bold">KHU VỰC MIỀN NAM</h6>
                   <ul class="menu menu--vertical">
                     <li class="text-white">111 Trần Đăng Ninh, Cầu Giấy, Hà Nội</li>
