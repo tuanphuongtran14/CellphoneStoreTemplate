@@ -111,11 +111,14 @@
 
 .account-form-edit label {
     font-size: 13px;
+    margin: 6px 0;
 }
 
 .account-form-edit input {
     font-size: 14px;
     width: 80%;
+    margin: 6px 0;
+
 }
 
 .account-form-edit legend {
@@ -175,3 +178,10 @@
     width: 30px;
 }
 
+.input-address__radio {
+    height: 16px !important;
+    width: 16px !important;
+    position: absolute;
+    right: 100px;
+  
+}
