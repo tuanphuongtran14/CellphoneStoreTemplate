@@ -61,7 +61,6 @@
                                 <i class="fa fa-shopping-bag fa--md" data-amount="0" aria-hidden="true"></i>
                             </a>
                         </li>
-                        </li>
                         <li class="menu__item">
                             <a class="text-white">
                                 <i class="fa fa-user fa--md" aria-hidden="true"></i>
@@ -572,10 +571,23 @@
           </footer>
     </div>
     <form action="" class="search-bar" id="search-bar">
-        <input type="text" name="seach" id="seach" class="search-input" placeholder="Search">
-        <button type="submit" class="btn btn--search">
-            <i class="fa fa-search " aria-hidden="true"></i>
-        </button>
+        <div class="container position-relative">
+            <input type="text" name="search" id="search" class="search-input container " placeholder="Search" style="width: 100%">
+            <button type="submit" class="btn btn--searchGo" id="search-go">
+                <div class="searchGo_text" href="./category.html">
+                    Go 
+                </div>
+            </button>
+            <button type="submit" class="btn btn--search" id="search-advanced">
+                <div class="searchGo_text" href="./advancedSearch.html">
+                    Advanced
+                </div>
+            </button>
+            <button type="submit" class="btn btn--search" id="search-icon">
+                <i class="fa fa-search " aria-hidden="true"></i>
+            </button>
+        </div>
+        
     </form>
     <div id="overlaybody"></div>
     <!-- Optional JavaScript -->

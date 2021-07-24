@@ -49,6 +49,9 @@
 
 body {
   background-color: #f0f0f0; }
+  .body_advanced{
+    color: #d62d20;
+  }
 
 /*-------------------------*/
 /* 2.1. #root & #overlaybody
@@ -89,7 +92,31 @@ body {
 /*-------------------------*/
 /* 2.4. Button
 /*-------------------------*/
+.btn.btn--searchGo {
+  position: absolute;
+  top: 0px;
+  right: 125px;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  background-color: #F3F3F3;
+  border: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  outline: none;
+  height: 2.3rem; }
+  .searchGo_text{
+    margin-top: -0.2rem;
+    border: 1px solid black;
+    padding: 0.05rem 0.5rem;
+  }
+
 .btn.btn--search {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 100000000000000000000000000000000;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   background-color: #F3F3F3;
@@ -291,6 +318,8 @@ body {
     border: none;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     background-color: #F3F3F3; }
