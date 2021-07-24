@@ -1,20 +1,25 @@
 var account = document.getElementById("show-account")
 var order = document.getElementById("show-order")
-var changePassword = document.querySelector("input[name=change-password]")
 var changePasswordShow = document.getElementById("change-password__show")
+var changePassword = document.querySelector("input[name=change-password]")
+
 
 changePasswordShow.style.display = "none"
 account.style.display = "block"
 order.style.display = "none"
 
+
 function customerToggle() {
     document.getElementById('account-event').addEventListener("click", function() {
         account.style.display = "block"
         order.style.display = "none"
+        bill.style.display = "none";
+
     });
     document.getElementById('order-event').addEventListener("click", function() {
         account.style.display = "none"
         order.style.display = "block"
+        bill.style.display = "none";
     });
 }
 customerToggle()
